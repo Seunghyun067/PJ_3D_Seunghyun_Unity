@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     {
         if (katanaTrail)
             katanaTrail.enabled = false;
+
+        Debug.Log("OK");
     }
 
     // Update is called once per frame
