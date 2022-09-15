@@ -5,12 +5,12 @@ using UnityEngine;
 public class KatanaCollider : MonoBehaviour
 {
     private PlayerController player;
+    private Collider myCollider;
     // Start is called before the first frame update
     void Awake()
     {
         player = GetComponentInParent<PlayerController>();
-        if (player)
-            Debug.Log(player.attackDamage.ToString() + "플레이어 컴포넌트를 찾았습ㄴ디ㅏㄷ ");
+        myCollider = GetComponent<Collider>();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -20,6 +20,8 @@ public class KatanaCollider : MonoBehaviour
 
         Debug.Log(player.attackDamage.ToString() + "만큼의 데미지 입힘 ");
         StartCoroutine(GameManager.Instance.TimeSleepCoroutine(0, 0.2f));
+        myCollider.enabled = false;
+
     }
 
     
