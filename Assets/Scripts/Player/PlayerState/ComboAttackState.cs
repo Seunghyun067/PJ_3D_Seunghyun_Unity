@@ -12,10 +12,7 @@ public class ComboAttackState : PlayerStateBase
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.Initialize(animator);
-        Debug.Log(animName + " Enter");
 
-        if (player.katanaTrail)
-            player.katanaTrail.enabled = true;
         animator.SetBool("ComboAttack", isCombo = false);
         animator.applyRootMotion = true;
     }
@@ -28,8 +25,6 @@ public class ComboAttackState : PlayerStateBase
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (player.katanaTrail)
-            player.katanaTrail.enabled = animator.applyRootMotion = isCombo;
-        Debug.Log(animName + "Exit");
+        animator.applyRootMotion = isCombo;
     }
 }

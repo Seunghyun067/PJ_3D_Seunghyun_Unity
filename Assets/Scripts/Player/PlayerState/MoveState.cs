@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleState : PlayerStateBase
+public class MoveState : PlayerStateBase
 {
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -55,6 +55,9 @@ public class IdleState : PlayerStateBase
 
         if (Input.GetButtonDown("Attack"))
             animator.SetTrigger("Attack");
+
+        if (Input.GetButtonDown("Roll"))
+            animator.SetTrigger("Roll");
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
