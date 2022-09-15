@@ -7,7 +7,7 @@ public class MoveState : PlayerStateBase
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialize(animator);
-        animator.applyRootMotion = false;
+        animator.applyRootMotion = true;
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -49,9 +49,9 @@ public class MoveState : PlayerStateBase
         Vector3 lookVec = (moveInput.x * rightVec + moveInput.z * forwardVec).normalized;
         
         if (lookVec.magnitude > 0)
-            player.transform.localRotation = Quaternion.Slerp(player.transform.localRotation, Quaternion.LookRotation(lookVec), player.rotSpeed * Time.deltaTime);
+            animator.rootRotation = Quaternion.Slerp(player.transform.localRotation, Quaternion.LookRotation(lookVec), player.rotSpeed * Time.deltaTime);
 
-        controller.Move(moveVec * Time.deltaTime);
+        //controller.Move(moveVec * Time.deltaTime);
 
         if (Input.GetButtonDown("Attack"))
             animator.SetTrigger("Attack");
