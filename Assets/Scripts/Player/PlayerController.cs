@@ -7,8 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private int comboAttackCount { get; set; } = 0;
 
-    [SerializeField] public TrailRenderer katanaTrail;
-    [SerializeField] public TrailRenderer katanaTrail2;
+    [SerializeField] private TrailRenderer katanaTrail;
     [SerializeField] public Collider katanaCollider;
 
     [SerializeField] public Transform camTransform;
@@ -23,10 +22,19 @@ public class PlayerController : MonoBehaviour
 
     public Monster attackTarget { get; set; }
 
+    private Coroutine distorCo;
+
+    public void KatanaTrailActive(bool isActive)
+    {
+        
+        katanaTrail.enabled = isActive;
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(bodyPosition.position, findTargetDst);
+        
     }
 
 
@@ -56,10 +64,10 @@ public class PlayerController : MonoBehaviour
     {
         if (katanaTrail)
         {
-            katanaTrail.enabled = false;
-            katanaTrail2.enabled = false;
+            KatanaTrailActive(false);
+            //moveTrail.SetActive(true);
         }
-
+        
         Debug.Log("OK");
     }
 

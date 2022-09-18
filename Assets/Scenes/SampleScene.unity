@@ -2493,6 +2493,46 @@ PrefabInstance:
       propertyPath: camTransform
       value: 
       objectReference: {fileID: 330585546}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 64764
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.01886791
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658604267594274160, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.m_NumAlphaKeys
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf1d8db208ed2c45bde272482b8a6d5, type: 3}
 --- !u!4 &8076445878930882452 stripped

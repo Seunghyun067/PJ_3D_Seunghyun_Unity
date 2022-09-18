@@ -13,14 +13,12 @@ public class PlayerAnimationEvent : MonoBehaviour
 
     public void SwordTrailOn()
     {
-        player.katanaTrail.enabled = true;
-        player.katanaTrail2.enabled = true;
+        player.KatanaTrailActive(true);
         player.katanaCollider.enabled = true;
     }
     void SwordTrailOff()
     {
-        player.katanaTrail.enabled = false;
-        player.katanaTrail2.enabled = false;
+        player.KatanaTrailActive(false);    
         player.katanaCollider.enabled = false;
     }
 }

@@ -44,6 +44,5 @@ public class ComboAttackState : PlayerStateBase
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       // animator.applyRootMotion = isCombo;
     }
 }
