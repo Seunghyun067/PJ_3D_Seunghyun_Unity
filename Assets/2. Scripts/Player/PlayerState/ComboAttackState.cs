@@ -25,9 +25,9 @@ public class ComboAttackState : PlayerStateBase
 
         
 
-        if(player.attackTarget)
+        if(player.TargetTransform)
         {
-            lookVec = player.attackTarget.transform.position - player.transform.position;
+            lookVec = player.TargetTransform.transform.position - player.transform.position;
             lookVec.y = 0;
             lookVec = lookVec.normalized;
         }

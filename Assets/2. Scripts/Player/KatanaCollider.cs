@@ -15,11 +15,13 @@ public class KatanaCollider : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.GetComponent<Monster>())
+        IDamable damagable = other.gameObject.GetComponent<IDamable>();
+
+        if (null == damagable)
             return;
 
-        Debug.Log(player.attackDamage.ToString() + "만큼의 데미지 입힘 ");
-        StartCoroutine(GameManager.Instance.TimeSleepCoroutine(0, 0.2f));
+        damagable.TakeDamage(5);
+        //StartCoroutine(GameManager.Instance.TimeSleepCoroutine(0.1f, 0.1f));
         myCollider.enabled = false;
 
     }

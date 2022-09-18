@@ -12,63 +12,56 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] public Transform camTransform;
 
-    [SerializeField] private Transform bodyPosition;
-    [SerializeField] private float findTargetDst = 5;
-    [SerializeField] private LayerMask findTargetLayerMask;
-
     [SerializeField] public float moveSpeed { get; }= 5;
     [SerializeField] public float rotSpeed { get; } = 5;
     [SerializeField] public int attackDamage { get; } = 5;
 
-    public Monster attackTarget { get; set; }
-
+    private ITargetable attackTarget;
+    private Transform targetTransform = null;
+    public Transform TargetTransform { get { return targetTransform; } }
+    private FindTargetOfOverlapSphere findTarget;
     private Coroutine distorCo;
 
+
+
+
     public void KatanaTrailActive(bool isActive)
-    {
-        
-        katanaTrail.enabled = isActive;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(bodyPosition.position, findTargetDst);
-        
-    }
-
-
-    Monster preTarget;
-    void FindTarget()
     {        
-        Collider[] coll = Physics.OverlapSphere(bodyPosition.position, findTargetDst, findTargetLayerMask);
-               
+        katanaTrail.enabled = isActive;
+    } 
+
+
+    ITargetable preTarget;
+    void FindTarget()
+    {
+        Collider[] coll = findTarget.FindTarget();
+
         if (0 == coll.Length)
         {
-            preTarget?.GetComponent<ITargetable>().NonTarget();
+            preTarget?.NonTarget();
             attackTarget = preTarget = null;
+            targetTransform = null;
             return;
         }
 
-        attackTarget = coll[0].GetComponent<Monster>();
- 
+        targetTransform = coll[0].gameObject.transform;
 
         if(attackTarget == preTarget)
             return;
 
-        preTarget?.GetComponent<ITargetable>().NonTarget();
-        attackTarget.GetComponent<ITargetable>().OnTarget();
+        preTarget?.NonTarget();
+        attackTarget.OnTarget();
         preTarget = attackTarget;
     }
-    void Start()
+    void Awake()
     {
         if (katanaTrail)
         {
             KatanaTrailActive(false);
             //moveTrail.SetActive(true);
         }
-        
-        Debug.Log("OK");
+        katanaCollider.enabled = false;
+        findTarget = GetComponent<FindTargetOfOverlapSphere>();
     }
 
     private void FixedUpdate()
