@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParryState : PlayerStateBase
+public class ParryStartState : PlayerStateBase
 {
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.Initialize(animator);
         animator.applyRootMotion = true;
-        player.parringAction += player.ParryAttackGo;
-        player.katana.ParryingColliderActive(true);
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -34,9 +32,5 @@ public class ParryState : PlayerStateBase
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("Parry", false);
-        player.parringAction -= player.ParryAttackGo;
-        player.katana.ParryingColliderActive(false);
-
     }
 }

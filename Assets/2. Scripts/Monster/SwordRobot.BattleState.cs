@@ -19,7 +19,6 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
                 moveDir.y = 0;
                 owner.controller.Move(moveDir * Time.deltaTime * owner.moveSpeed);
 
-                Debug.Log(Vector3.Distance(owner.target.transform.position, owner.transform.position));
                 if (Vector3.Distance(owner.target.transform.position, owner.transform.position) <= 1.25f)
                 {
                     owner.ChangeState(SwordRobotState.ATTACK);

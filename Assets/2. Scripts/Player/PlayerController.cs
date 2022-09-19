@@ -3,30 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDamable
 {
     private int comboAttackCount { get; set; } = 0;
 
-    [SerializeField] private TrailRenderer katanaTrail;
-    [SerializeField] public Collider katanaCollider;
+    //[SerializeField] private TrailRenderer katanaTrail;
+    //[SerializeField] public Collider katanaCollider;
 
     [SerializeField] public Transform camTransform;
 
     [SerializeField] public float moveSpeed { get; }= 5;
     [SerializeField] public float rotSpeed { get; } = 5;
     [SerializeField] public int attackDamage { get; } = 5;
+    [SerializeField] private int hp = 10;
 
     private ITargetable attackTarget;
     private Transform targetTransform = null;
     public Transform TargetTransform { get { return targetTransform; } }
     private FindTargetOfOverlapSphere findTarget;
     private Coroutine distorCo;
+    private Animator animator;
 
-    public void KatanaTrailActive(bool isActive)
-    {        
-        katanaTrail.enabled = isActive;
-    } 
-
+    public Action parringAction;
+    [HideInInspector] public Katana katana;
 
     ITargetable preTarget;
     void FindTarget()
@@ -65,18 +64,25 @@ public class PlayerController : MonoBehaviour
     }
     void Awake()
     {
-        if (katanaTrail)
-        {
-            KatanaTrailActive(false);
-            //moveTrail.SetActive(true);
-        }
-        katanaCollider.enabled = false;
+        katana = GetComponentInChildren<Katana>();        
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
+        animator = GetComponent<Animator>();
+    }
+
+    public void ParryAttackGo()
+    {
+        animator.SetTrigger("ParryAttack");        
     }
 
     private void FixedUpdate()
     {
         FindTarget();
-    } 
+    }
 
+    public void TakeDamage(int damage)
+    {
+        hp -= damage;
+
+        animator.SetTrigger("Hit");
+    }
 }

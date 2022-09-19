@@ -5,7 +5,13 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     // Start is called before the first frame update
-    public IEnumerator TimeSleepCoroutine(float scale, float time)
+
+    public void TimeSleep(float scale, float time)
+    {
+        StartCoroutine(TimeSleepCoroutine(scale, time));
+    }
+
+    IEnumerator TimeSleepCoroutine(float scale, float time)
     {
         Time.timeScale = scale;
         yield return new WaitForSecondsRealtime(time);

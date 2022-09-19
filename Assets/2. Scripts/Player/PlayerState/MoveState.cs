@@ -40,7 +40,7 @@ public class MoveState : PlayerStateBase
         if (Input.GetButtonDown("Parry"))
         {
             animator.SetBool("Parry", true);
-            Debug.Log("Parry");
+            animator.SetTrigger("ParryT");
         }
 
         if (moveInput.magnitude >= 0.99f && Input.GetButton("Run"))

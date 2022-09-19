@@ -494,6 +494,7 @@ GameObject:
   - component: {fileID: 776128602924622482}
   - component: {fileID: 6268000884345047804}
   - component: {fileID: 8714811304391777431}
+  - component: {fileID: 8214870842385885987}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -569,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a88efc0719cae49a73f108e5e72d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetedObject: {fileID: 0}
+  targetedObject: {fileID: 8473108706457880051}
   hp: 20
   moveSpeed: 1
   rotSpeed: 20
@@ -594,6 +595,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 72
   gizmoColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &8214870842385885987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196412952108884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c76a7202a6a834582675499bc07c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCollider: {fileID: 3766777840627427794}
 --- !u!1 &1197114330632252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1930,8 @@ Transform:
   m_LocalPosition: {x: -0.01, y: 0.00170501, z: 0.009043963}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 891358333091973575}
   m_Father: {fileID: 4048411141394190}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2922,6 +2937,65 @@ Transform:
   m_Father: {fileID: 4219076460180680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6335910527281370266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891358333091973575}
+  - component: {fileID: 3766777840627427794}
+  - component: {fileID: 8339927338426524573}
+  m_Layer: 0
+  m_Name: SwordColl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &891358333091973575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335910527281370266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4517405843620792}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3766777840627427794
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335910527281370266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8339927338426524573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335910527281370266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bf1fa6c793de34ba150e1814273fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8833782842889866887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,6 +3131,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 162c9bb2676c5440a9ed25a3b813a31e, type: 3}
+--- !u!1 &8473108706457880051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1770230391938196, guid: 162c9bb2676c5440a9ed25a3b813a31e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8471496823995865447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8475496587545705343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4448933244690968, guid: 162c9bb2676c5440a9ed25a3b813a31e,

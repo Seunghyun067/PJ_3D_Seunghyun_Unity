@@ -235,14 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eca04fe8ccbec0418d6e39fb2de27ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  katanaTrail: {fileID: 0}
-  katanaCollider: {fileID: 425227062630102046}
   camTransform: {fileID: 0}
-  bodyPosition: {fileID: 3872258671091538335}
-  findTargetDst: 3
-  findTargetLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
+  katana: {fileID: 0}
 --- !u!143 &3342778281534294626
 CharacterController:
   m_ObjectHideFlags: 0
@@ -254,13 +248,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.25
+  m_Height: 1.8
+  m_Radius: 0.13
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &2639835388324980776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6aa3a0083c50944a0c13ae5ee80e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effect: {fileID: 0}
 --- !u!114 &5288769146533883613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2092,12 +2087,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b5151990f71674d81afbaf60a3b5a0, type: 3}
---- !u!136 &425227062630102046 stripped
-CapsuleCollider:
-  m_CorrespondingSourceObject: {fileID: 816743991695960798, guid: 50b5151990f71674d81afbaf60a3b5a0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1059222875926159040}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4297617979725680854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2113,12 +2102,12 @@ PrefabInstance:
     - target: {fileID: 160484399314501631, guid: 8ca2cdb55dfa370408d80107d6193f08,
         type: 3}
       propertyPath: m_shaderPropertyID
-      value: 989
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 160484399314501631, guid: 8ca2cdb55dfa370408d80107d6193f08,
         type: 3}
       propertyPath: m_materialData.Array.data[0].m_move
-      value: 0.0081
+      value: 0.1628381
       objectReference: {fileID: 0}
     - target: {fileID: 1893065722960749156, guid: 8ca2cdb55dfa370408d80107d6193f08,
         type: 3}
