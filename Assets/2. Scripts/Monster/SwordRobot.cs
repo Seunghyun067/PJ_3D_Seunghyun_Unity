@@ -84,8 +84,11 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         }
         else
         {
+            StopAllCoroutines();
             ChangeState(SwordRobotState.DIE);
             animator.SetTrigger("Dead");
+            targetedObject?.SetActive(false);
+            isDead = true;
         }
             
     }

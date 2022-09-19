@@ -22,9 +22,7 @@ public class ComboAttackState : PlayerStateBase
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Vector3 lookVec;
-
         
-
         if(player.TargetTransform)
         {
             lookVec = player.TargetTransform.transform.position - player.transform.position;
@@ -33,8 +31,6 @@ public class ComboAttackState : PlayerStateBase
         }
         else
             lookVec = new Vector3(player.camTransform.forward.x, 0f, player.camTransform.forward.z).normalized;
-
-
 
         animator.rootRotation = Quaternion.Slerp(player.transform.localRotation, Quaternion.LookRotation(lookVec), player.rotSpeed * Time.deltaTime);
 

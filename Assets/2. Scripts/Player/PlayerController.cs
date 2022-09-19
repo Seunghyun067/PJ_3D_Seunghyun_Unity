@@ -22,9 +22,6 @@ public class PlayerController : MonoBehaviour
     private FindTargetOfOverlapSphere findTarget;
     private Coroutine distorCo;
 
-
-
-
     public void KatanaTrailActive(bool isActive)
     {        
         katanaTrail.enabled = isActive;
@@ -34,9 +31,9 @@ public class PlayerController : MonoBehaviour
     ITargetable preTarget;
     void FindTarget()
     {
-        Collider[] coll = findTarget.FindTarget();
+        Collider[] colls = findTarget.FindTarget();
 
-        if (0 == coll.Length)
+        if (0 == colls.Length)
         {
             preTarget?.NonTarget();
             attackTarget = preTarget = null;
@@ -44,9 +41,22 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        targetTransform = coll[0].gameObject.transform;
+        ITargetable target = null;
+        targetTransform = null;
+        foreach(var coll in colls)
+        {
+            target = coll.GetComponent<ITargetable>();
 
-        if(attackTarget == preTarget)
+            if (!target.IsTarget())
+                continue;
+            else
+            {
+                targetTransform = coll.gameObject.transform;
+                attackTarget = target;
+            }
+        }
+
+        if (attackTarget == preTarget)
             return;
 
         preTarget?.NonTarget();
@@ -67,5 +77,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         FindTarget();
-    }
+    } 
+
 }

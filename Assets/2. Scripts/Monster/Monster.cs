@@ -9,16 +9,17 @@ using UnityEngine;
 public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  where T2 : MonoBehaviour
 {
     [SerializeField] protected GameObject targetedObject = null;
-    [SerializeField] protected GameObject target;
     [SerializeField] protected int hp;
     [SerializeField] protected float moveSpeed = 1f;
     [SerializeField] protected float rotSpeed = 20f;
 
+    protected GameObject target;
     protected Animator animator;
     protected CharacterController controller;
 
     protected StateMachine<T1, T2> stateMachine;
     protected FindTargetOfOverlapSphere findTarget;
+    protected bool isDead = false;
 
     public void ChangeState(T1 nextState)
     {
@@ -27,24 +28,48 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
 
     protected void FindTarget()
     {
-        Collider[] coll = null;
-        if (!findTarget.FindTarget(ref coll))
+        Collider[] colls = null;
+
+        if (!findTarget.FindTarget(ref colls))
         {
             target = null;
             return;
         }
 
-        target = coll[0].gameObject;
+        foreach(var coll in colls)
+        {
+            int rayerNumber = coll.gameObject.layer;
+
+            if (rayerNumber == LayerMask.NameToLayer("Player"))
+            {
+                target = coll.gameObject;
+                break;
+            }
+            else if(rayerNumber == LayerMask.NameToLayer("Monster"))
+            {
+                target = coll.gameObject.GetComponent<SwordRobot>().target;
+
+                if(target)
+                    break;
+                continue;
+            }
+            
+        }
+
+        
     }
 
     public void NonTarget()
     {
-        target?.SetActive(false);
+        if (isDead) return;
+
+        targetedObject?.SetActive(false);
     }
 
     public void OnTarget()
     {
-        target?.SetActive(true);
+        if (isDead) return;
+        targetedObject?.SetActive(true);
     }
 
     public virtual void TakeDamage(int damage)
@@ -55,9 +80,14 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
     public void Initialize()
     {
         Debug.Log("Monster Awake");
-        //targetedObject?.SetActive(false);
+        targetedObject?.SetActive(false);
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
+    }
+
+    public bool IsTarget()
+    {
+        return !isDead;
     }
 }
