@@ -14,13 +14,14 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
     [SerializeField] protected float rotSpeed = 20f;
 
     [SerializeField] protected Renderer[] myRenderer;
-    protected GameObject target;
+    protected PlayerController target;
     protected Animator animator;
     protected CharacterController controller;
 
     protected StateMachine<T1, T2> stateMachine;
     protected FindTargetOfOverlapSphere findTarget;
     protected bool isDead = false;
+    protected PlayerController player;
 
     protected IEnumerator DissolveEnable(float timeScale = 1f)
     {
@@ -73,12 +74,12 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
 
             if (rayerNumber == LayerMask.NameToLayer("Player"))
             {
-                target = coll.gameObject;
+                target = player;
                 break;
             }
             else if(rayerNumber == LayerMask.NameToLayer("Monster"))
             {
-                target = coll.gameObject.GetComponent<SwordRobot>().target;
+                target = player;
 
                 if(target)
                     break;
@@ -115,6 +116,7 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
+        player = FindObjectOfType<PlayerController>();
     }
 
     public bool IsTarget()

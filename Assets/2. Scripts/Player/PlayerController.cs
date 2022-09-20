@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour, IDamable
     //[SerializeField] public Collider katanaCollider;
 
     [SerializeField] public Transform camTransform;
+    [SerializeField] private Transform bodyPoint;
+    public Vector3 BodyPoint { get { return bodyPoint.position; } }
 
     [SerializeField] public float moveSpeed { get; }= 5;
     [SerializeField] public float rotSpeed { get; } = 5;
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour, IDamable
     private FindTargetOfOverlapSphere findTarget;
     private Coroutine distorCo;
     private Animator animator;
+
 
     public Action parringAction;
     [HideInInspector] public Katana katana;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1330,6 +1330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RifleRobot
       objectReference: {fileID: 0}
+    - target: {fileID: 1196412952108884, guid: e4649b2af052f58418226f3d2f7c5a33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4942982090425048, guid: e4649b2af052f58418226f3d2f7c5a33, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -1348,7 +1352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4942982090425048, guid: e4649b2af052f58418226f3d2f7c5a33, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4922576
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4942982090425048, guid: e4649b2af052f58418226f3d2f7c5a33, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1356,7 +1360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4942982090425048, guid: e4649b2af052f58418226f3d2f7c5a33, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.94
+      value: 8.52
       objectReference: {fileID: 0}
     - target: {fileID: 4942982090425048, guid: e4649b2af052f58418226f3d2f7c5a33, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1391,10 +1395,95 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 817514224923188887, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058250590148787446, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473250645114441160, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064327239574050220, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2601
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064327239574050220, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064327239574050220, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.367
+      objectReference: {fileID: 0}
     - target: {fileID: 5183394768108637494, guid: e4649b2af052f58418226f3d2f7c5a33,
         type: 3}
       propertyPath: hp
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5183394768108637494, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: laserEffect
+      value: 
+      objectReference: {fileID: 2132690333}
+    - target: {fileID: 6654648480583084441, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867857194256872566, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944229860440376311, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156427859752298490, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817226173789555617, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819715831604331890, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893479759127835513, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919830541500220042, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919830541500220042, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.27058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919830541500220042, guid: e4649b2af052f58418226f3d2f7c5a33,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.27058825
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4649b2af052f58418226f3d2f7c5a33, type: 3}
@@ -3226,6 +3315,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2132690333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7156427859752298490, guid: e4649b2af052f58418226f3d2f7c5a33,
+    type: 3}
+  m_PrefabInstance: {fileID: 830326370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5019343159931561483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3339,6 +3434,11 @@ PrefabInstance:
       propertyPath: m_materialData.Array.data[0].m_move
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4315917207177492324, guid: ecf1d8db208ed2c45bde272482b8a6d5,
+        type: 3}
+      propertyPath: bodyPoint
+      value: 
+      objectReference: {fileID: 8076445878930882452}
     - target: {fileID: 4315917207177492324, guid: ecf1d8db208ed2c45bde272482b8a6d5,
         type: 3}
       propertyPath: katanaTrail

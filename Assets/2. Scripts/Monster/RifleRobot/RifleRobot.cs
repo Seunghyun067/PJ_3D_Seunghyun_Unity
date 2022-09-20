@@ -8,6 +8,23 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
 {
     // Start is called before the first frame update
     [SerializeField] private Collider attackCollider;
+    [SerializeField] private GameObject laserEffect;
+    [SerializeField] private Transform shootPosition;
+    private EGA_Laser laser;
+
+    public void ShootLaser()
+    {
+        laser.dstPosition = player.BodyPoint;
+        laser.LaserShoot();
+    }
+
+
+
+
+    public Vector3 ShootPosition
+    {
+        get { return shootPosition.position; }
+    }
 
     public void AttackColliderActive(bool isActive)
     {
@@ -21,6 +38,7 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         if (myRenderer.Length == 0)
             myRenderer = GetComponentsInChildren<Renderer>();
         StateInit();
+        laser = GetComponentInChildren<EGA_Laser>();
     }
 
     

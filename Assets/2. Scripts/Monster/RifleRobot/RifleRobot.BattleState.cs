@@ -39,7 +39,8 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
     {
         public override void OnStateEnter(RifleRobot owner)
         {
-            
+            owner.animator.SetBool("Attack", true);
+            owner.animator.SetBool("Walk", true);
         }
         public override IEnumerator OnStateUpdate(RifleRobot owner)
         {
@@ -49,7 +50,8 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
             {
                 if (attackTime < 0f)
                 {
-                    owner.animator.SetTrigger("Attack");
+                    Debug.Log("Shoot");
+                    owner.ShootLaser();
                     attackTime = attackDelay;
                 }
 
@@ -64,26 +66,27 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
                 }
 
                 Vector3 moveDir = (owner.target.transform.position - owner.transform.position).normalized;
-                Vector3 lookDir = moveDir;                
+                Vector3 lookDir = moveDir;
 
                 if (dist >= 5f && dist <= 6f)
                 {
+                    owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(moveDir), owner.rotSpeed * Time.deltaTime);
                     moveDir = Vector3.zero;
-                    owner.animator.SetBool("Trace", false);
+                    owner.animator.SetBool("Walk", false);
                 }
                 else if (dist < 5f)
                 {
                     owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(moveDir), owner.rotSpeed * Time.deltaTime);
                     moveDir.y = 0;
                     owner.controller.Move(-moveDir * Time.deltaTime * owner.moveSpeed);
-                    owner.animator.SetBool("Trace", true);
+                    owner.animator.SetBool("Walk", true);
                 }
-                else if(dist > 6f)
+                else if (dist > 6f)
                 {
                     owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(moveDir), owner.rotSpeed * Time.deltaTime);
                     moveDir.y = 0;
                     owner.controller.Move(moveDir * Time.deltaTime * owner.moveSpeed);
-                    owner.animator.SetBool("Trace", true);
+                    owner.animator.SetBool("Walk", true);
                 }
 
                 yield return null;
@@ -91,6 +94,7 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         }
         public override void OnStateExit(RifleRobot owner)
         {
+            owner.animator.SetBool("Attack", true);
         }
     }
     private class HitState : BaseState

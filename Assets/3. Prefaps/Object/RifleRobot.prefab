@@ -596,6 +596,8 @@ MonoBehaviour:
   - {fileID: 137863116036252854}
   - {fileID: 23827844687044640}
   attackCollider: {fileID: 8256010765956998144}
+  laserEffect: {fileID: 7156427859752298490}
+  shootPosition: {fileID: 5064327239574050220}
 --- !u!114 &8400340401271478970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,7 +610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbcfc541d5882f4497fddfb1e776225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
 --- !u!1 &1197114330632252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3024,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5729494884295708628, guid: a9dc5ac3e781c98488657a45aca1435f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9dc5ac3e781c98488657a45aca1435f, type: 3}
 --- !u!4 &4868409996877232 stripped
@@ -3034,6 +3040,18 @@ Transform:
 --- !u!23 &23827844687044640 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3865751877218412882, guid: a9dc5ac3e781c98488657a45aca1435f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3886975457671940466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5064327239574050220 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8338790053444050142, guid: a9dc5ac3e781c98488657a45aca1435f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3886975457671940466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7156427859752298490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6242537385302437512, guid: a9dc5ac3e781c98488657a45aca1435f,
     type: 3}
   m_PrefabInstance: {fileID: 3886975457671940466}
   m_PrefabAsset: {fileID: 0}

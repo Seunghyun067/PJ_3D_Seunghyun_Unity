@@ -14,6 +14,15 @@ public class KatanaParryingCollider : MonoBehaviour
         myCollider = GetComponent<Collider>();
     }
 
+    public void ParryingOK()
+    {
+        Instantiate(Effect, transform.position, Quaternion.identity);
+        GameManager.Instance.TimeSleep(0.1f, 0.5f);
+        player.parringAction?.Invoke();
+        //her.enabled = false;
+        myCollider.enabled = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != LayerMask.NameToLayer("Parrying"))
