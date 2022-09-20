@@ -521,7 +521,7 @@ InputManager:
     m_Name: Parry
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: left shift
+    negativeButton: mouse 1
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 

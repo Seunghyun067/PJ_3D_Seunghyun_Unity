@@ -7,8 +7,12 @@ public enum SwordRobotState { IDLE, TRACE, ATTACK, HIT, DIE, NONE_STATE }
 public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
 {
     // Start is called before the first frame update
-    [SerializeField] private Renderer[] myRenderer;
-    
+    [SerializeField] private Collider attackCollider;
+
+    public void AttackColliderActive(bool isActive)
+    {
+        attackCollider.enabled = isActive;
+    }
 
     private void Awake()
     {
@@ -19,39 +23,11 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         StateInit();
     }
 
-    IEnumerator DissolveEnable()
-    {
-        float dissolveValue = 1f;
-
-        while (dissolveValue > 0f)
-        {
-            for (int i = 0; i < myRenderer.Length; ++i)
-                myRenderer[i].material.SetFloat("_Dissolve", dissolveValue -= Time.deltaTime);
-            yield return null;
-        }
-        for (int i = 0; i < myRenderer.Length; ++i)
-            myRenderer[i].material.SetFloat("_Dissolve", 0f);
-        yield return null;
-    }
-    IEnumerator DissolveDisable()
-    {
-        float dissolveValue = 0f;
-
-        while (dissolveValue < 1f)
-        {
-            for (int i = 0; i < myRenderer.Length; ++i)
-                myRenderer[i].material.SetFloat("_Dissolve", dissolveValue += Time.deltaTime * 0.5f);
-            yield return null;
-        }
-        for (int i = 0; i < myRenderer.Length; ++i)
-            myRenderer[i].material.SetFloat("_Dissolve", 1f);
-        Destroy(gameObject);
-        yield return null;
-    }
+    
 
     public void DeadEffect()
     {
-        StartCoroutine(DissolveDisable());
+        StartCoroutine(DissolveDisable(0.3f));
 
     }
 
@@ -61,22 +37,13 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         StartCoroutine(DissolveEnable());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-            animator.SetTrigger("Hit");
-
-
-    }
-
     public override void TakeDamage(int damage)
     {
         if (hp <= 0)
             return;
 
-        hp -= damage;       
-
+        hp -= damage;
+        attackCollider.enabled = false;
         if (hp > 0)
         {
             ChangeState(SwordRobotState.HIT);
@@ -85,10 +52,10 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         else
         {
             StopAllCoroutines();
-            ChangeState(SwordRobotState.DIE);
             animator.SetTrigger("Dead");
             targetedObject?.SetActive(false);
             isDead = true;
+            ChangeState(SwordRobotState.DIE);
         }
             
     }

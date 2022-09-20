@@ -83,8 +83,8 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         }
         public override IEnumerator OnStateUpdate(SwordRobot owner)
         {
-            yield return new WaitForSeconds(1f);
             owner.DeadEffect();
+            yield return new WaitForSeconds(1f);
         }
         public override void OnStateExit(SwordRobot owner)
         {

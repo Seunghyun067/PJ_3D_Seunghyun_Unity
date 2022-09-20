@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour, IDamable
     public Action parringAction;
     [HideInInspector] public Katana katana;
 
+    public GameObject[] BloodFX;
+
     ITargetable preTarget;
     void FindTarget()
     {
@@ -83,6 +85,12 @@ public class PlayerController : MonoBehaviour, IDamable
     {
         hp -= damage;
 
+        
         animator.SetTrigger("Hit");
+        Vector3 pos = transform.position;
+        pos.y += 1f;
+        Instantiate(BloodFX[UnityEngine.Random.Range(1, BloodFX.Length)], pos, Quaternion.identity);
+        katana.KatanaTrailActive(false);
+        katana.AttackColliderActive(false);
     }
 }
