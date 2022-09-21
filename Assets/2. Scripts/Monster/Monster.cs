@@ -9,7 +9,9 @@ using UnityEngine;
 public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  where T2 : MonoBehaviour
 {
     [SerializeField] protected GameObject targetedObject = null;
-    [SerializeField] protected int hp;
+    [SerializeField] protected Transform bodyPoint = null;
+    [SerializeField] protected int maxHP;
+    protected int curHp;
     [SerializeField] protected float moveSpeed = 1f;
     [SerializeField] protected float rotSpeed = 20f;
 
@@ -49,7 +51,7 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
         }
         for (int i = 0; i < myRenderer.Length; ++i)
             myRenderer[i].material.SetFloat("_Dissolve", 1f);
-        Destroy(gameObject);
+        ObjectPooling.Instance.PushObject(this.gameObject);
         yield return null;
     }
 
@@ -106,12 +108,11 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
 
     public virtual void TakeDamage(int damage)
     {
-        hp -= damage;
+        maxHP -= damage;
     }
 
     public void Initialize()
     {
-        Debug.Log("Monster Awake");
         targetedObject?.SetActive(false);
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
         animator = GetComponent<Animator>();

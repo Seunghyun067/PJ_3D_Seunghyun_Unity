@@ -10,12 +10,14 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
     [SerializeField] private Collider attackCollider;
     [SerializeField] private GameObject laserEffect;
     [SerializeField] private Transform shootPosition;
-    private EGA_Laser laser;
+    private float moveWeight = 0f;
 
     public void ShootLaser()
     {
-        laser.dstPosition = player.BodyPoint;
-        laser.LaserShoot();
+        var laser = ObjectPooling.Instance.PopObject("BlueLaser");
+        laser.transform.position = shootPosition.position;
+        laser.GetComponent<EGA_Laser>().LaserShoot(player.BodyPoint, bodyPoint);
+
     }
 
 
@@ -38,7 +40,6 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         if (myRenderer.Length == 0)
             myRenderer = GetComponentsInChildren<Renderer>();
         StateInit();
-        laser = GetComponentInChildren<EGA_Laser>();
     }
 
     
@@ -51,18 +52,19 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
 
     private void OnEnable()
     {
-        Debug.Log("asd");
         StartCoroutine(DissolveEnable());
+        stateMachine.ChangeState(RifleRobotState.IDLE);
+        curHp = maxHP;
     }
 
     public override void TakeDamage(int damage)
     {
-        if (hp <= 0)
+        if (maxHP <= 0)
             return;
 
-        hp -= damage;
+        maxHP -= damage;
         attackCollider.enabled = false;
-        if (hp > 0)
+        if (maxHP > 0)
         {
             ChangeState(RifleRobotState.HIT);
             animator.SetTrigger("Hit");
@@ -86,6 +88,5 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         stateMachine.AddState(RifleRobotState.HIT, new HitState());
         stateMachine.AddState(RifleRobotState.ATTACK, new AttackState());
         stateMachine.AddState(RifleRobotState.DIE, new DieState());
-        stateMachine.ChangeState(RifleRobotState.IDLE);
     }
 }

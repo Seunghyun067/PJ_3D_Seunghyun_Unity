@@ -40,7 +40,9 @@ public class KatanaAttackCollider : MonoBehaviour
         rot.y = 1;
         Quaternion q =  Quaternion.LookRotation(rot);
 
-        Instantiate(hitEffect, pos, q);
+        var hitEffect = ObjectPooling.Instance.PopObject("SparksCore");
+        hitEffect.transform.position = pos;
+        hitEffect.transform.rotation = q;
 
         //hitEffect.SetActive(true);
 

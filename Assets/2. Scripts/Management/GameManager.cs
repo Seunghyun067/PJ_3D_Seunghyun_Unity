@@ -20,6 +20,9 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        //var obj = ObjectPooling.Instance.PopObject("SwordRobot");
+        //obj.transform.position = new Vector3(1f, 0f, 5f);
     }
 
     // Update is called once per frame

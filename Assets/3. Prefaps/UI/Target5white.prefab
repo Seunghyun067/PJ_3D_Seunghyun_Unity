@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 212511414433679518}
   - component: {fileID: 95743425866065568}
   - component: {fileID: 5912011456995425167}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Target5white
   m_TagString: Untagged
   m_Icon: {fileID: 0}

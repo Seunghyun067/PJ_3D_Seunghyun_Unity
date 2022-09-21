@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RobotAnimationEvent : MonoBehaviour
 {
-    [SerializeField] private SwordRobot owner;
+    private SwordRobot owner;
 
     private void Awake()
     {

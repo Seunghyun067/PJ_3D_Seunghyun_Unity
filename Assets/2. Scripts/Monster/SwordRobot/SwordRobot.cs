@@ -35,16 +35,19 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
     {
         Debug.Log("asd");
         StartCoroutine(DissolveEnable());
+        stateMachine.ChangeState(SwordRobotState.IDLE);
+        isDead = false;
+        curHp = maxHP;
     }
 
     public override void TakeDamage(int damage)
     {
-        if (hp <= 0)
+        if (curHp <= 0)
             return;
 
-        hp -= damage;
+        curHp -= damage;
         attackCollider.enabled = false;
-        if (hp > 0)
+        if (curHp > 0)
         {
             ChangeState(SwordRobotState.HIT);
             animator.SetTrigger("Hit");
@@ -68,6 +71,5 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         stateMachine.AddState(SwordRobotState.HIT, new HitState());
         stateMachine.AddState(SwordRobotState.ATTACK, new AttackState());
         stateMachine.AddState(SwordRobotState.DIE, new DieState());
-        stateMachine.ChangeState(SwordRobotState.IDLE);
     }
 }

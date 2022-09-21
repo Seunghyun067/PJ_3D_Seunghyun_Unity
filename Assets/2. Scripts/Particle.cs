@@ -12,9 +12,14 @@ public class Particle : MonoBehaviour
     private void Awake()
     {
         particles = GetComponents<ParticleSystem>();
-        StartCoroutine(ParticleOnEnable());
+        
     }
     private void OnEnable()
+    {
+        StartCoroutine(ParticleOnEnable());
+    }
+
+    private void OnDisable()
     {
         
     }
@@ -25,7 +30,7 @@ public class Particle : MonoBehaviour
             particles[i].Play();
 
         yield return new WaitForSeconds(duration);
-        gameObject.SetActive(false);
+        ObjectPooling.Instance.PushObject(gameObject);
     }
 
 }
