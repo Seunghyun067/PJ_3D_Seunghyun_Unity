@@ -7,31 +7,31 @@ using UnityEngine;
 public class EGA_Laser : MonoBehaviour
 {
     private Transform owner = null;
-    public GameObject HitEffect;
-    public float HitOffset = 0;
 
-    public float MaxLength;
+    [SerializeField] private GameObject HitEffect;
+    [SerializeField] private float HitOffset = 0;
+
+    [SerializeField] private float MaxLength;
+    private float MainTextureLength = 1f;
+    private float NoiseTextureLength = 1f;
+
     private LineRenderer Laser;
 
-    public Vector3 dstPosition;
+    private Vector3 dstPosition;
 
-    public float MainTextureLength = 1f;
-    public float NoiseTextureLength = 1f;
     private Vector4 Length = new Vector4(1,1,1,1);
-    //private Vector4 LaserSpeed = new Vector4(0, 0, 0, 0); {DISABLED AFTER UPDATE}
-    //private Vector4 LaserStartSpeed; {DISABLED AFTER UPDATE}
-    //One activation per shoot
+
     private bool LaserSaver = false;
     private bool UpdateSaver = false;
 
     private ParticleSystem[] Effects;
     private ParticleSystem[] Hit;
     Vector3 dir;
-    public LayerMask layermask;
+    public LayerMask layerMask = ~0;
     private float curLength = 0f;
-    public void SetLayerMask()
+    public void SetLayerMask(int layerMask)
     {
-        layermask = 1 << LayerMask.NameToLayer("Monster");
+        this.layerMask = layerMask;
     }
     public void LaserShoot(Vector3 _dstPosition, Transform owner = null)
     {
@@ -45,6 +45,11 @@ public class EGA_Laser : MonoBehaviour
         Laser.SetPosition(0, transform.position);
         
         StartCoroutine(ShootTime());
+    }
+
+    private void OnEnable()
+    {
+        curLength = 0f;
     }
 
     IEnumerator ShootTime()
@@ -61,13 +66,15 @@ public class EGA_Laser : MonoBehaviour
 
         while (shootTime >= time)
         {
-            if (curLength < MaxLength && !isHit)
+            if (curLength < MaxLength)
                 curLength += Time.deltaTime * 50f;
 
             Debug.Log(curLength);
             LaserRaycast();
             Laser.SetPosition(0, transform.position);
-            Laser.SetPosition(1, transform.position + dir * curLength);
+
+            if (!isHit)
+                Laser.SetPosition(1, transform.position + dir * curLength);
 
             time += Time.deltaTime;
             yield return null;
@@ -102,7 +109,7 @@ public class EGA_Laser : MonoBehaviour
             RaycastHit hit;
 
             Debug.DrawRay(transform.position, transform.position + dir * curLength, Color.red);
-            if (Physics.Raycast(transform.position, dir, out hit, curLength, layermask))//CHANGE THIS IF YOU WANT TO USE LASERRS IN 2D: if (hit.collider != null)
+            if (Physics.Raycast(transform.position, dir, out hit, curLength, layerMask))//CHANGE THIS IF YOU WANT TO USE LASERRS IN 2D: if (hit.collider != null)
             {
                 if (!isHit && hit.transform.gameObject.layer == LayerMask.NameToLayer("Sword"))
                 {
@@ -110,8 +117,9 @@ public class EGA_Laser : MonoBehaviour
                     // GameObject obj = Instantiate(gameObject, hit.point, Quaternion.identity);
                     GameObject obj = ObjectPooling.Instance.PopObject("BlueLaser", hit.point);
                     GameManager.Instance.TimeSleep(0.05f, 0.3f);
-                    obj.GetComponent<EGA_Laser>().SetLayerMask();
-                    obj.GetComponent<EGA_Laser>().LaserShoot(owner.position);
+                    EGA_Laser laser = obj.GetComponent<EGA_Laser>();
+                    laser.SetLayerMask(~(1 << LayerMask.NameToLayer("Sword")));
+                    laser.LaserShoot(owner.position);
                 }
                 if (!isHit && hit.transform.gameObject.layer == LayerMask.NameToLayer("Monster"))
                 {

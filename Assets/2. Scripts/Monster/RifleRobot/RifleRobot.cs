@@ -8,19 +8,22 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
 {
     // Start is called before the first frame update
     [SerializeField] private Collider attackCollider;
-    [SerializeField] private GameObject laserEffect;
     [SerializeField] private Transform shootPosition;
+    
     private float moveWeight = 0f;
-
+    private GameObject chargingEffect;
     public void ShootLaser()
     {
         var laser = ObjectPooling.Instance.PopObject("BlueLaser");
         laser.transform.position = shootPosition.position;
         laser.GetComponent<EGA_Laser>().LaserShoot(player.BodyPoint, bodyPoint);
-
     }
 
-
+    private void Update()
+    {
+        if (chargingEffect)
+            chargingEffect.transform.position = shootPosition.position;
+    }
 
 
     public Vector3 ShootPosition
@@ -63,7 +66,6 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
             return;
 
         maxHP -= damage;
-        attackCollider.enabled = false;
         if (maxHP > 0)
         {
             ChangeState(RifleRobotState.HIT);
@@ -76,6 +78,8 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
             targetedObject?.SetActive(false);
             isDead = true;
             ChangeState(RifleRobotState.DIE);
+            if (chargingEffect)
+                ObjectPooling.Instance.PushObject(chargingEffect);
         }
             
     }

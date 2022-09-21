@@ -12,6 +12,8 @@ public class Particle : MonoBehaviour
     private void Awake()
     {
         particles = GetComponents<ParticleSystem>();
+        for (int i = 0; i < particles.Length; ++i)
+            particles[i].Play();
         
     }
     private void OnEnable()
@@ -21,7 +23,7 @@ public class Particle : MonoBehaviour
 
     private void OnDisable()
     {
-        
+        StopAllCoroutines();
     }
 
     IEnumerator ParticleOnEnable()

@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3882107683340195010}
   - component: {fileID: 3857190749830375870}
   - component: {fileID: 3865751877218412882}
-  - component: {fileID: 5143798626549001586}
   - component: {fileID: 7582105776083573867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rifle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5143798626549001586
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3888268741582563988}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.04
-  m_Center: {x: -0.05512033, y: -0.0130041, z: -0.07560431}
 --- !u!114 &7582105776083573867
 MonoBehaviour:
   m_ObjectHideFlags: 0

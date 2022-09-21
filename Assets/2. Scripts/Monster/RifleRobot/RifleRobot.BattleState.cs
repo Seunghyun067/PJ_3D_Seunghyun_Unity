@@ -45,18 +45,28 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         }
         public override IEnumerator OnStateUpdate(RifleRobot owner)
         {
-            float attackTime = 0.5f;
-            float attackDelay = 2f;
+            yield return null;
+            float curChargingTime = 0f;
+            float chargingTime = 1.5f;
+            bool isCharging = false;
             while (true)
-            {
-                if (attackTime < 0f)
+            {                
+                if (!isCharging)
                 {
                     Debug.Log("Shoot");
-                    owner.ShootLaser();
-                    attackTime = attackDelay;
+                    owner.chargingEffect = ObjectPooling.Instance.PopObject("Charge Particles");
+                    owner.chargingEffect.transform.position = owner.shootPosition.position;
+                    isCharging = true;
                 }
 
-                attackTime -= Time.deltaTime;
+                if (curChargingTime > chargingTime)
+                {
+                    isCharging = false;
+                    owner.ShootLaser();
+                    curChargingTime = 0f;
+                }
+
+                curChargingTime += Time.deltaTime;
 
                 float dist = Vector3.Distance(owner.target.transform.position, owner.transform.position);
                 float moveWeight = 0f;

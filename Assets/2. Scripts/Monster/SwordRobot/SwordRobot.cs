@@ -33,7 +33,6 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
 
     private void OnEnable()
     {
-        Debug.Log("asd");
         StartCoroutine(DissolveEnable());
         stateMachine.ChangeState(SwordRobotState.IDLE);
         isDead = false;
