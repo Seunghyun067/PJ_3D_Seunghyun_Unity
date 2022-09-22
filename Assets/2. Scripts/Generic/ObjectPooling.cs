@@ -46,7 +46,7 @@ public class ObjectPooling : Singleton<ObjectPooling>
     {
         if(!objectPool.ContainsKey(tag))
         {
-            Debug.LogError("오브젝트 풀에 해당 태그가 없음");
+            Debug.LogError("오브젝트 풀에" + tag + " 없음");
             return null;
         }
         var obj = objectPool[tag].Dequeue();
@@ -61,7 +61,7 @@ public class ObjectPooling : Singleton<ObjectPooling>
     {
         if (!objectPool.ContainsKey(tag))
         {
-            Debug.LogError("오브젝트 풀에 해당 태그가 없음");
+            Debug.LogError("오브젝트 풀에" + tag + " 없음");
             return null;
         }
         var obj = objectPool[tag].Dequeue();
@@ -76,7 +76,7 @@ public class ObjectPooling : Singleton<ObjectPooling>
     {
         if (!objectPool.ContainsKey(tag))
         {
-            Debug.LogError("오브젝트 풀에 해당 태그가 없음");
+            Debug.LogError("오브젝트 풀에" + tag + " 없음");
             return null;
         }
         var obj = objectPool[tag].Dequeue();
@@ -90,7 +90,7 @@ public class ObjectPooling : Singleton<ObjectPooling>
         string tag = obj.name.Replace("(Clone)", "");
         if (!objectPool.ContainsKey(tag))
         {
-            Debug.LogError("오브젝트 풀에 해당 태그가 없음");
+            Debug.LogError(tag + " 풀이 비어있음");
             return;
         }
 

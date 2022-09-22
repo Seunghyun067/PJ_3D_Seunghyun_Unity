@@ -39,7 +39,7 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         curHp = maxHP;
     }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(int damage, Transform transform = null)
     {
         if (curHp <= 0)
             return;

@@ -60,7 +60,7 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         curHp = maxHP;
     }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(int damage, Transform transform)
     {
         if (maxHP <= 0)
             return;

@@ -8,10 +8,10 @@ public class ParryingEffect : MonoBehaviour
 
     void Update()
     {
-        myScale += Time.unscaledDeltaTime * 10f;
+        myScale += Time.unscaledDeltaTime * 20f;
         transform.localScale = new Vector3(myScale, myScale, myScale);
 
-        if (myScale >= 3f)
+        if (myScale >= 6f)
             Destroy(gameObject);
     }
 }

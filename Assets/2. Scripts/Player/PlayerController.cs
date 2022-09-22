@@ -84,15 +84,27 @@ public class PlayerController : MonoBehaviour, IDamable
         FindTarget();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Transform targetTransform)
     {
         hp -= damage;
 
-        
-        animator.SetTrigger("Hit");
+        float angle = Mathf.Acos(Vector3.Dot(transform.forward, targetTransform.forward)) * Mathf.Rad2Deg;
+
+        if (90f < angle && angle <= 180f) // 90 ~ 180 ¾Õ
+            animator.SetBool("FrontHit", true);
+        else if (0 < angle && angle <= 90f) // 0 ~ 90 µÚ
+            animator.SetBool("FrontHit", false);
+
+        Debug.Log(Mathf.Acos(Vector3.Dot(transform.forward, targetTransform.forward)) * Mathf.Rad2Deg);
+
+        if (damage >= 10)
+            animator.SetTrigger("HeavyHit");
+        else if (damage >= 5)
+            animator.SetTrigger("Hit");
         Vector3 pos = transform.position;
         pos.y += 1f;
-        Instantiate(BloodFX[UnityEngine.Random.Range(1, BloodFX.Length)], pos, Quaternion.identity);
+        string bloodTag = "Blood" + UnityEngine.Random.Range(1, 4).ToString();
+        ObjectPooling.Instance.PopObject(bloodTag, pos);
         katana.KatanaTrailActive(false);
         katana.AttackColliderActive(false);
     }

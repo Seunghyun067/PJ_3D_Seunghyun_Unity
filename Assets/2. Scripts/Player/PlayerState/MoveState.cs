@@ -26,7 +26,7 @@ public class MoveState : PlayerStateBase
         if (lookVec.magnitude > 0)
             animator.rootRotation = Quaternion.Slerp(player.transform.localRotation, Quaternion.LookRotation(lookVec), player.rotSpeed * Time.deltaTime);
 
-
+        
         if (Input.GetButtonDown("Attack"))
         {
             animator.SetTrigger("Attack");

@@ -106,7 +106,7 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
         targetedObject?.SetActive(true);
     }
 
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage, Transform transform = null)
     {
         maxHP -= damage;
     }

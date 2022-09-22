@@ -66,15 +66,17 @@ public class EGA_Laser : MonoBehaviour
 
         while (shootTime >= time)
         {
-            if (curLength < MaxLength)
+            if (!isHit && curLength < MaxLength)
                 curLength += Time.deltaTime * 50f;
 
-            Debug.Log(curLength);
             LaserRaycast();
             Laser.SetPosition(0, transform.position);
 
             if (!isHit)
+            {
                 Laser.SetPosition(1, transform.position + dir * curLength);
+                HitEffect.transform.position = transform.position + dir * curLength;
+            }
 
             time += Time.deltaTime;
             yield return null;
@@ -101,8 +103,8 @@ public class EGA_Laser : MonoBehaviour
     bool isHit = false;
     void LaserRaycast()
     {
-        //Laser.material.SetTextureScale("_MainTex", new Vector2(Length[0], Length[1]));
-        //Laser.material.SetTextureScale("_Noise", new Vector2(Length[2], Length[3]));
+        Laser.material.SetTextureScale("_MainTex", new Vector2(Length[0], Length[1]));
+        Laser.material.SetTextureScale("_Noise", new Vector2(Length[2], Length[3]));
 
         if (Laser.enabled && UpdateSaver == false)
         {
@@ -131,7 +133,7 @@ public class EGA_Laser : MonoBehaviour
                 if (!isHit && hit.transform.gameObject.layer == LayerMask.NameToLayer("Player"))
                 {
                     isHit = true;
-                    hit.transform.gameObject.GetComponent<IDamable>().TakeDamage(5);
+                    hit.transform.gameObject.GetComponent<IDamable>().TakeDamage(10, owner.transform);
                 }
 
                 //End laser position if collides with object
@@ -189,7 +191,7 @@ public class EGA_Laser : MonoBehaviour
             }
         }
 
-        Invoke("Disable", 0.2f);
+        Invoke("Disable", 1f);
         
     }
     public void Disable()

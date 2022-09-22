@@ -8,7 +8,6 @@ public class CameraManager : Singleton<CameraManager>
     [SerializeField] private CinemachineFreeLook mainCM;
     private CinemachineBasicMultiChannelPerlin cameraNoise;
 
-    private float curShakeTime = 0f;
     private Coroutine shakeCoroutine;
 
 

@@ -21,11 +21,8 @@ public class KatanaAttackCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Parrying"))
-        {
-            player.parringAction?.Invoke();
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             return;
-        }
         IDamable damagable = other.gameObject.GetComponent<IDamable>();
 
         

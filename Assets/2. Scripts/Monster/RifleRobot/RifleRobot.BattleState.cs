@@ -53,7 +53,6 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
             {                
                 if (!isCharging)
                 {
-                    Debug.Log("Shoot");
                     owner.chargingEffect = ObjectPooling.Instance.PopObject("Charge Particles");
                     owner.chargingEffect.transform.position = owner.shootPosition.position;
                     isCharging = true;
@@ -100,6 +99,7 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         public override void OnStateExit(RifleRobot owner)
         {
             owner.animator.SetBool("Attack", false);
+            ObjectPooling.Instance.PushObject(owner.chargingEffect);
         }
     }
     private class HitState : BaseState

@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class SwordRobotCollider : MonoBehaviour
 {
+    SwordRobot robot;
+    private void Awake()
+    {
+        robot = GetComponentInParent<SwordRobot>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != LayerMask.NameToLayer("Player"))
             return;
 
-        other.gameObject.GetComponent<IDamable>().TakeDamage(5);
+        other.gameObject.GetComponent<IDamable>().TakeDamage(5, robot.transform);
     }
 }
