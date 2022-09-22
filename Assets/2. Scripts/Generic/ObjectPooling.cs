@@ -64,6 +64,13 @@ public class ObjectPooling : Singleton<ObjectPooling>
             Debug.LogError("오브젝트 풀에" + tag + " 없음");
             return null;
         }
+
+        if (objectPool[tag].Count == 0)
+        {
+            Debug.LogError(tag + "풀이 비었음");
+            return null;
+        }
+
         var obj = objectPool[tag].Dequeue();
         obj.SetActive(true);
         obj.transform.parent = null;
