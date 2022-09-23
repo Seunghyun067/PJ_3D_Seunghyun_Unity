@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    private LineRenderer render;
+    Vector3 savePos;
+    Vector3 pos;
+    bool isCut = false;
+    
 
     private void Awake()
     {
-        render = GetComponent<LineRenderer>();
+        pos = transform.localPosition;
     }
     private float curL = 0f;
     private void Update()
     {
-        Vector3 dir = Vector3.forward;
-        render.SetPosition(1, dir * curL);
-        curL += Time.deltaTime;
+        pos = transform.position;
+        if (isCut)
+        {
+            pos.y -= 1f * Time.deltaTime;
+            transform.position = pos;
+        }
+        Debug.Log(transform.localPosition);
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            transform.SetParent(null);
+            isCut = true;
+        }
     }
 }
