@@ -15,5 +15,6 @@ public class SwordRobotCollider : MonoBehaviour
             return;
 
         other.gameObject.GetComponent<IDamable>().TakeDamage(5, robot.transform);
+        other.GetComponent<PlayerController>().HitTrigger("Hit");
     }
 }

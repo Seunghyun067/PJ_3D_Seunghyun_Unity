@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 1544917808217819360}
   - component: {fileID: 7252573207678451307}
   - component: {fileID: 532804489955890776}
+  - component: {fileID: 5560915701551373832}
   m_Layer: 9
   m_Name: ParryingCollider
   m_TagString: Untagged
@@ -269,7 +270,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 4.21
+  m_Radius: 14.8
   m_Height: 2.51
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -286,6 +287,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Effect: {fileID: 3017351585554683632, guid: 2b4b2790375869440b2884db3adc9839, type: 3}
+--- !u!54 &5560915701551373832
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5758550551150058314}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6127298860790648551
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 025f59c9833520b4bad32403ecef61ff, type: 2}
+  - {fileID: 2100000, guid: f8d9ea200cac29944954fb4a5a4cbc56, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -381,6 +398,7 @@ GameObject:
   - component: {fileID: 3335258481640424653}
   - component: {fileID: 816743991695960798}
   - component: {fileID: 8916467616482015673}
+  - component: {fileID: 7118065964109455345}
   m_Layer: 9
   m_Name: AttackCollider
   m_TagString: Untagged
@@ -441,6 +459,22 @@ MonoBehaviour:
     type: 3}
   top: {fileID: 4612620629044998233}
   bottom: {fileID: 121991363901375319}
+--- !u!54 &7118065964109455345
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747866770981234879}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &5816483110348038562
 PrefabInstance:
   m_ObjectHideFlags: 0

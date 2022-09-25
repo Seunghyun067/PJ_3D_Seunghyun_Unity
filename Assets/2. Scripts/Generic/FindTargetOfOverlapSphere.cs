@@ -12,7 +12,7 @@ public class FindTargetOfOverlapSphere : MonoBehaviour
     [Header("Gizmo Information")]
     [SerializeField] private Color gizmoColor = Color.red;
 
-    private void Awake()
+    public void Init()
     {
         if (!centerPosition) centerPosition = transform;
     }

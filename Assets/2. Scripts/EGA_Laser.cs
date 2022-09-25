@@ -134,6 +134,7 @@ public class EGA_Laser : MonoBehaviour
                 {
                     isHit = true;
                     hit.transform.gameObject.GetComponent<IDamable>().TakeDamage(10, owner.transform);
+                    hit.transform.GetComponent<PlayerController>().HitTrigger("HeavyHit");
                 }
 
                 //End laser position if collides with object

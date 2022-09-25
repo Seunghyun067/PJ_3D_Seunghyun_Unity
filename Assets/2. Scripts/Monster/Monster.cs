@@ -110,11 +110,13 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
     {
         maxHP -= damage;
     }
+    public abstract void HitEffect(Vector3 position, Quaternion rotaiton);
 
     public void Initialize()
     {
         targetedObject?.SetActive(false);
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
+        findTarget.Init();
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         player = FindObjectOfType<PlayerController>();

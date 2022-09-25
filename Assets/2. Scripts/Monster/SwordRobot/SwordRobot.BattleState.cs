@@ -4,6 +4,11 @@ using UnityEngine;
 
 public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
 {
+    public override void HitEffect(Vector3 position, Quaternion rotaiton)
+    {
+        var hitEffect = ObjectPooling.Instance.PopObject("SparksCore", position, rotaiton);
+    }
+
     private class TraceState : BaseState
     {
         public override void OnStateEnter(SwordRobot owner)

@@ -23,27 +23,23 @@ public class KatanaAttackCollider : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             return;
-        IDamable damagable = other.gameObject.GetComponent<IDamable>();
+        IDamable damagable = other.gameObject.GetComponentInParent<IDamable>();
 
         
         
         if (null == damagable)
             return;
+        
 
-        Vector3 pos = other.transform.position;
-        pos.y += 1f;
+        Vector3 myPos = player.transform.position;
+        myPos.y = 0;
+        Vector3 targetPos = other.gameObject.transform.root.position;
+        targetPos.y = 0;
+        Vector3 hitNormal = (myPos - targetPos).normalized;
 
-        Vector3 rot = (bottom.position - top.position).normalized;
-        rot.y = 1;
-        Quaternion q =  Quaternion.LookRotation(rot);
-
-        var hitEffect = ObjectPooling.Instance.PopObject("SparksCore");
-        hitEffect.transform.position = pos;
-        hitEffect.transform.rotation = q;
-
-        //hitEffect.SetActive(true);
 
         damagable.TakeDamage(5);
+        damagable.HitEffect(other.bounds.center, Quaternion.LookRotation(hitNormal));
         myCollider.enabled = false;
 
     }

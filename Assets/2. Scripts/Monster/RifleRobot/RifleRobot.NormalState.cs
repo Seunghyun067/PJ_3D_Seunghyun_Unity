@@ -4,6 +4,11 @@ using UnityEngine;
 
 public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
 {
+    public override void HitEffect(Vector3 position, Quaternion rotaiton)
+    {
+        throw new System.NotImplementedException();
+    }
+
     private abstract class BaseState : State<RifleRobot> {}
 
     private class IdleState : BaseState

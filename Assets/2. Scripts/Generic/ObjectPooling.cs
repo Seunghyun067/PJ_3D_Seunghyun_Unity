@@ -94,7 +94,13 @@ public class ObjectPooling : Singleton<ObjectPooling>
 
     public void PushObject(GameObject obj)
     {
-        string tag = obj.name.Replace("(Clone)", "");
+        string tag = obj.name;
+        int cutIndex = tag.IndexOf(' ');
+        if (-1 != cutIndex) tag = tag.Substring(0, cutIndex);
+
+        cutIndex = tag.IndexOf('(');
+        if (-1 != cutIndex) tag = tag.Substring(0, cutIndex);
+
         if (!objectPool.ContainsKey(tag))
         {
             Debug.LogError(tag + " 풀이 비어있음");
