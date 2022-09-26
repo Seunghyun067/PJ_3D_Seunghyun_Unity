@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class RunState : PlayerStateBase
 {
-
+    bool isAttack = false;
+    bool isRoll = false;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialize(animator);
         animator.applyRootMotion = true;
+        isAttack = false;
+        isRoll = false;
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -27,11 +30,17 @@ public class RunState : PlayerStateBase
             animator.rootRotation = Quaternion.Slerp(player.transform.localRotation, Quaternion.LookRotation(lookVec), player.rotSpeed * Time.deltaTime);
 
 
-        if (Input.GetButtonDown("Attack"))
+        if (!isAttack && Input.GetButtonDown("Attack"))
+        {
+            isAttack = true;
             animator.SetTrigger("RunAttack");
+        }
 
-        if (Input.GetButtonDown("Roll"))
+        if (!isRoll && Input.GetButtonDown("Roll"))
+        {
             animator.SetTrigger("Roll");
+            isRoll = true;
+        }
 
         if (Input.GetButtonUp("Run"))
         {

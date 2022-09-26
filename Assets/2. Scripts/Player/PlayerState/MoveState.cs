@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MoveState : PlayerStateBase
 {
+    bool isRoll = false;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Initialize(animator);
         animator.applyRootMotion = true;
         player.katana.ParryingColliderActive(false);
+        animator.SetBool("Run", false);
+        isRoll = false;
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -35,8 +38,12 @@ public class MoveState : PlayerStateBase
         }
 
 
-        if (Input.GetButtonDown("Roll"))
+        if (!isRoll && Input.GetButtonDown("Roll"))
+        {
             animator.SetTrigger("Roll");
+            isRoll = true;
+        }
+
 
         if (Input.GetButtonDown("Parry"))
         {

@@ -11,10 +11,11 @@ public class PlayerController : MonoBehaviour, IDamable
     //[SerializeField] public Collider katanaCollider;
 
     [SerializeField] public Transform camTransform;
+    [SerializeField] bool autoTargetting = true;
     [SerializeField] private Transform bodyPoint;
     public Vector3 BodyPoint { get { return bodyPoint.position; } }
 
-    [SerializeField] public float moveSpeed { get; }= 5;
+    [SerializeField] public float moveSpeed { get; } = 5;
     [SerializeField] public float rotSpeed { get; } = 5;
     [SerializeField] public int attackDamage { get; } = 5;
     [SerializeField] private int hp = 10;
@@ -47,17 +48,23 @@ public class PlayerController : MonoBehaviour, IDamable
 
         ITargetable target = null;
         targetTransform = null;
-        foreach(var coll in colls)
+        float curTargetDist = 100f;
+
+        foreach (var coll in colls)
         {
             target = coll.GetComponentInParent<ITargetable>();
 
             if (!target.IsTarget())
                 continue;
-            else
+
+            float dist = Vector3.Distance(transform.position, coll.transform.position);
+
+            if (curTargetDist > dist)
             {
                 targetTransform = coll.gameObject.transform;
                 attackTarget = target;
-            }
+                curTargetDist = dist;
+            }            
         }
 
         if (attackTarget == preTarget)
@@ -69,33 +76,33 @@ public class PlayerController : MonoBehaviour, IDamable
     }
     void Awake()
     {
-        katana = GetComponentInChildren<Katana>();        
+        katana = GetComponentInChildren<Katana>();
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
         animator = GetComponent<Animator>();
     }
 
     public void ParryAttackGo()
     {
-        animator.SetTrigger("ParryAttack");        
+        animator.SetTrigger("ParryAttack");
     }
     [SerializeField] private Transform bossCo;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
-        {
-            var laser = ObjectPooling.Instance.PopObject("RedLaser");
-            Vector3 pos = Camera.main.transform.position - Camera.main.transform.forward * 10f;
-            pos.y -= 1f;
-            laser.transform.position = pos;
-            laser.GetComponent<BossShootLaser>().LaserShoot(bossCo.position);
+            FindTarget();
 
-            
+        if (attackTarget != null && !attackTarget.IsTarget())
+        {
+            preTarget?.NonTarget();
+            attackTarget = preTarget = null;
+            targetTransform = null;
         }
     }
 
     private void FixedUpdate()
     {
-        FindTarget();
+        if (autoTargetting && attackTarget == null)
+            FindTarget();
     }
 
     public void HitTrigger(string triggerTag)

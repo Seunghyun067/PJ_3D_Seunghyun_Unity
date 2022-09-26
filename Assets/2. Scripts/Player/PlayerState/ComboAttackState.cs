@@ -36,9 +36,16 @@ public class ComboAttackState : PlayerStateBase
 
         if (!isCombo && Input.GetButtonDown("Attack") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= normalizeTime)
             animator.SetBool("ComboAttack", isCombo = true);
+
+        if (Input.GetButtonDown("Parry"))
+        {
+            animator.SetBool("Parry", true);
+            animator.SetTrigger("ParryT");
+        }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        player.katana.AttackColliderActive(false);
     }
 }

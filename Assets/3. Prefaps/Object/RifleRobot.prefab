@@ -370,7 +370,6 @@ MonoBehaviour:
   - {fileID: 5646872020939563136}
   - {fileID: 5755836328551670806}
   attackCollider: {fileID: 0}
-  laserEffect: {fileID: 0}
   shootPosition: {fileID: 719567841022218650}
 --- !u!114 &4260529491315515020
 MonoBehaviour:

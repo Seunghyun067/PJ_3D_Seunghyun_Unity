@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetedObject: {fileID: 5601619133075495498}
+  bodyPoint: {fileID: 0}
   maxHP: 10
   moveSpeed: 3
   rotSpeed: 20
