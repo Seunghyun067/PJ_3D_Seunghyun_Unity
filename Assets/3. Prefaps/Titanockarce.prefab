@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 306278411175993282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3989017354377827975}
   - component: {fileID: 8208250207336453205}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (9)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7668200629788069341}
   - component: {fileID: 5205191510436391573}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_WeakPointBackBackShell (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,65 +121,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.49, y: 1.25, z: 4.06}
   m_Center: {x: 0, y: -0.29, z: 0}
---- !u!1 &2020362040954495222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9196726589971808966}
-  - component: {fileID: 2438617239445528745}
-  - component: {fileID: 662012331443928484}
-  m_Layer: 0
-  m_Name: Collider_Jaw (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9196726589971808966
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020362040954495222}
-  m_LocalRotation: {x: -0.1595485, y: 0.6522324, z: -0.33369157, w: 0.66165483}
-  m_LocalPosition: {x: 2.36, y: -1.44, z: 1.8}
-  m_LocalScale: {x: 1.8948967, y: 1, z: 0.93441}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2365098553173122238}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 12.953001, y: 84.212006, z: -41.81}
---- !u!65 &2438617239445528745
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020362040954495222}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.06, y: 1.61, z: 3.51}
-  m_Center: {x: 0, y: 0, z: -1.58}
---- !u!65 &662012331443928484
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020362040954495222}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.31, y: 1.42, z: 4.91}
-  m_Center: {x: 0, y: 0, z: -5.64}
 --- !u!1 &2365098551297809833
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098551297809834}
   - component: {fileID: 2365098551297809835}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (2)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -235,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098551453526717}
   - component: {fileID: 2365098551453526718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (1)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -280,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098551508230904}
   - component: {fileID: 2365098551508230905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (8)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -325,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098551632325155}
   - component: {fileID: 2365098551632325156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -370,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098551677227876}
   - component: {fileID: 2365098551677227877}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (4)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -415,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098551720565326}
   - component: {fileID: 2365098551720565327}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (3)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -460,7 +401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098551897249712}
   - component: {fileID: 2365098551897249713}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (5)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -505,7 +446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098552148045399}
   - component: {fileID: 2365098552148045400}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (7)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -550,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098552477729052}
   - component: {fileID: 2365098552477729053}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (3)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -595,7 +536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098552838952746}
   - component: {fileID: 2365098552838952747}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (6)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -640,7 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098552886296731}
   - component: {fileID: 2365098552886296732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (6)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -685,7 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098552965233750}
   - component: {fileID: 2365098552965233751}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (4)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -730,7 +671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553076646154}
   - component: {fileID: 2365098553076646155}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (7)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -775,7 +716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553111570168}
   - component: {fileID: 2365098553111570169}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (8)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -821,7 +762,7 @@ GameObject:
   - component: {fileID: 2365098553173121632}
   - component: {fileID: 2365098553171827286}
   - component: {fileID: 2365098553170827286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,7 +845,7 @@ GameObject:
   - component: {fileID: 2365098553173121634}
   - component: {fileID: 2365098553171827272}
   - component: {fileID: 2365098553170827272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleBase001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,7 +928,7 @@ GameObject:
   - component: {fileID: 2365098553173121636}
   - component: {fileID: 2365098553171827274}
   - component: {fileID: 2365098553170827274}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleBase002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1070,7 +1011,7 @@ GameObject:
   - component: {fileID: 2365098553173121638}
   - component: {fileID: 2365098553171827276}
   - component: {fileID: 2365098553170827276}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleBase003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1152,7 +1093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173121640}
   - component: {fileID: 2365098553169906456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Titanockarce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1275,7 +1216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173121642}
   - component: {fileID: 2365098553169906458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Titanockarce_WeakPointBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,7 +1303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173121644}
   - component: {fileID: 2365098553169906460}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SK_Titanockarce_WeakPointTail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1392,7 @@ GameObject:
   - component: {fileID: 2365098553165641176}
   - component: {fileID: 8057862097826665407}
   - component: {fileID: 6556794331999251720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1538,7 +1479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365098553173121654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1513,7 @@ GameObject:
   - component: {fileID: 2365098553173121824}
   - component: {fileID: 2365098553171827478}
   - component: {fileID: 2365098553170827734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment090
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,7 +1596,7 @@ GameObject:
   - component: {fileID: 2365098553173121826}
   - component: {fileID: 2365098553171827464}
   - component: {fileID: 2365098553170827720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment091
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1738,7 +1679,7 @@ GameObject:
   - component: {fileID: 2365098553173121828}
   - component: {fileID: 2365098553171827466}
   - component: {fileID: 2365098553170827722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment092
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1821,7 +1762,7 @@ GameObject:
   - component: {fileID: 2365098553173121830}
   - component: {fileID: 2365098553171827468}
   - component: {fileID: 2365098553170827724}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment093
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1904,7 +1845,7 @@ GameObject:
   - component: {fileID: 2365098553173121832}
   - component: {fileID: 2365098553171827486}
   - component: {fileID: 2365098553170827742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment086
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1987,7 +1928,7 @@ GameObject:
   - component: {fileID: 2365098553173121834}
   - component: {fileID: 2365098553171827472}
   - component: {fileID: 2365098553170827728}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment087
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2070,7 +2011,7 @@ GameObject:
   - component: {fileID: 2365098553173121836}
   - component: {fileID: 2365098553171827474}
   - component: {fileID: 2365098553170827730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment088
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2094,7 @@ GameObject:
   - component: {fileID: 2365098553173121838}
   - component: {fileID: 2365098553171827476}
   - component: {fileID: 2365098553170827732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment089
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2236,7 +2177,7 @@ GameObject:
   - component: {fileID: 2365098553173121840}
   - component: {fileID: 2365098553171827494}
   - component: {fileID: 2365098553170827750}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment082
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2319,7 +2260,7 @@ GameObject:
   - component: {fileID: 2365098553173121842}
   - component: {fileID: 2365098553171827480}
   - component: {fileID: 2365098553170827736}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment083
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2402,7 +2343,7 @@ GameObject:
   - component: {fileID: 2365098553173121844}
   - component: {fileID: 2365098553171827482}
   - component: {fileID: 2365098553170827738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment084
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2485,7 +2426,7 @@ GameObject:
   - component: {fileID: 2365098553173121846}
   - component: {fileID: 2365098553171827484}
   - component: {fileID: 2365098553170827740}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment085
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2568,7 +2509,7 @@ GameObject:
   - component: {fileID: 2365098553173121848}
   - component: {fileID: 2365098553171827502}
   - component: {fileID: 2365098553170827758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment078
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2651,7 +2592,7 @@ GameObject:
   - component: {fileID: 2365098553173121850}
   - component: {fileID: 2365098553171827488}
   - component: {fileID: 2365098553170827744}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment079
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2734,7 +2675,7 @@ GameObject:
   - component: {fileID: 2365098553173121852}
   - component: {fileID: 2365098553171827490}
   - component: {fileID: 2365098553170827746}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment080
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2817,7 +2758,7 @@ GameObject:
   - component: {fileID: 2365098553173121854}
   - component: {fileID: 2365098553171827492}
   - component: {fileID: 2365098553170827748}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment081
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2900,7 +2841,7 @@ GameObject:
   - component: {fileID: 2365098553173121984}
   - component: {fileID: 2365098553171827510}
   - component: {fileID: 2365098553170827766}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment074
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2984,7 +2925,7 @@ GameObject:
   - component: {fileID: 2365098553173121986}
   - component: {fileID: 2365098553171827496}
   - component: {fileID: 2365098553170827752}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3067,7 +3008,7 @@ GameObject:
   - component: {fileID: 2365098553173121988}
   - component: {fileID: 2365098553171827498}
   - component: {fileID: 2365098553170827754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment076
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3150,7 +3091,7 @@ GameObject:
   - component: {fileID: 2365098553173121990}
   - component: {fileID: 2365098553171827500}
   - component: {fileID: 2365098553170827756}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment077
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3233,7 +3174,7 @@ GameObject:
   - component: {fileID: 2365098553173121992}
   - component: {fileID: 2365098553171827518}
   - component: {fileID: 2365098553170827774}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment070
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3317,7 +3258,7 @@ GameObject:
   - component: {fileID: 2365098553173121994}
   - component: {fileID: 2365098553171827504}
   - component: {fileID: 2365098553170827760}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment071
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3401,7 +3342,7 @@ GameObject:
   - component: {fileID: 2365098553173121996}
   - component: {fileID: 2365098553171827506}
   - component: {fileID: 2365098553170827762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment072
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3485,7 +3426,7 @@ GameObject:
   - component: {fileID: 2365098553173121998}
   - component: {fileID: 2365098553171827508}
   - component: {fileID: 2365098553170827764}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment073
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3569,7 +3510,7 @@ GameObject:
   - component: {fileID: 2365098553173122000}
   - component: {fileID: 2365098553171827654}
   - component: {fileID: 2365098553170827654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3653,7 +3594,7 @@ GameObject:
   - component: {fileID: 2365098553173122002}
   - component: {fileID: 2365098553171827512}
   - component: {fileID: 2365098553170827768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment067
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3737,7 +3678,7 @@ GameObject:
   - component: {fileID: 2365098553173122004}
   - component: {fileID: 2365098553171827514}
   - component: {fileID: 2365098553170827770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment068
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3821,7 +3762,7 @@ GameObject:
   - component: {fileID: 2365098553173122006}
   - component: {fileID: 2365098553171827516}
   - component: {fileID: 2365098553170827772}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment069
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3904,7 +3845,7 @@ GameObject:
   - component: {fileID: 2365098553173122008}
   - component: {fileID: 2365098553171827662}
   - component: {fileID: 2365098553170827662}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment062
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3988,7 +3929,7 @@ GameObject:
   - component: {fileID: 2365098553173122010}
   - component: {fileID: 2365098553171827648}
   - component: {fileID: 2365098553170827648}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment063
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4072,7 +4013,7 @@ GameObject:
   - component: {fileID: 2365098553173122012}
   - component: {fileID: 2365098553171827650}
   - component: {fileID: 2365098553170827650}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment064
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4156,7 +4097,7 @@ GameObject:
   - component: {fileID: 2365098553173122014}
   - component: {fileID: 2365098553171827652}
   - component: {fileID: 2365098553170827652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment065
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4240,7 +4181,7 @@ GameObject:
   - component: {fileID: 2365098553173121888}
   - component: {fileID: 2365098553171827542}
   - component: {fileID: 2365098553170827542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4323,7 +4264,7 @@ GameObject:
   - component: {fileID: 2365098553173121890}
   - component: {fileID: 2365098553171827528}
   - component: {fileID: 2365098553170827528}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4406,7 +4347,7 @@ GameObject:
   - component: {fileID: 2365098553173121892}
   - component: {fileID: 2365098553171827530}
   - component: {fileID: 2365098553170827530}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4489,7 +4430,7 @@ GameObject:
   - component: {fileID: 2365098553173121894}
   - component: {fileID: 2365098553171827532}
   - component: {fileID: 2365098553170827532}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4572,7 +4513,7 @@ GameObject:
   - component: {fileID: 2365098553173121896}
   - component: {fileID: 2365098553171827550}
   - component: {fileID: 2365098553170827550}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleTip004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4655,7 +4596,7 @@ GameObject:
   - component: {fileID: 2365098553173121898}
   - component: {fileID: 2365098553171827536}
   - component: {fileID: 2365098553170827536}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleTip005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4738,7 +4679,7 @@ GameObject:
   - component: {fileID: 2365098553173121900}
   - component: {fileID: 2365098553171827538}
   - component: {fileID: 2365098553170827538}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,7 +4762,7 @@ GameObject:
   - component: {fileID: 2365098553173121902}
   - component: {fileID: 2365098553171827540}
   - component: {fileID: 2365098553170827540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4904,7 +4845,7 @@ GameObject:
   - component: {fileID: 2365098553173121904}
   - component: {fileID: 2365098553171827558}
   - component: {fileID: 2365098553170827558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4987,7 +4928,7 @@ GameObject:
   - component: {fileID: 2365098553173121906}
   - component: {fileID: 2365098553171827544}
   - component: {fileID: 2365098553170827544}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleTip001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5070,7 +5011,7 @@ GameObject:
   - component: {fileID: 2365098553173121908}
   - component: {fileID: 2365098553171827546}
   - component: {fileID: 2365098553170827546}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleTip002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5153,7 +5094,7 @@ GameObject:
   - component: {fileID: 2365098553173121910}
   - component: {fileID: 2365098553171827548}
   - component: {fileID: 2365098553170827548}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleTip003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5236,7 +5177,7 @@ GameObject:
   - component: {fileID: 2365098553173121912}
   - component: {fileID: 2365098553171827566}
   - component: {fileID: 2365098553170827566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5319,7 +5260,7 @@ GameObject:
   - component: {fileID: 2365098553173121914}
   - component: {fileID: 2365098553171827552}
   - component: {fileID: 2365098553170827552}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5402,7 +5343,7 @@ GameObject:
   - component: {fileID: 2365098553173121916}
   - component: {fileID: 2365098553171827554}
   - component: {fileID: 2365098553170827554}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5485,7 +5426,7 @@ GameObject:
   - component: {fileID: 2365098553173121918}
   - component: {fileID: 2365098553171827556}
   - component: {fileID: 2365098553170827556}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5568,7 +5509,7 @@ GameObject:
   - component: {fileID: 2365098553173121792}
   - component: {fileID: 2365098553171827574}
   - component: {fileID: 2365098553170827574}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5651,7 +5592,7 @@ GameObject:
   - component: {fileID: 2365098553173121794}
   - component: {fileID: 2365098553171827560}
   - component: {fileID: 2365098553170827560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5734,7 +5675,7 @@ GameObject:
   - component: {fileID: 2365098553173121796}
   - component: {fileID: 2365098553171827562}
   - component: {fileID: 2365098553170827562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5817,7 +5758,7 @@ GameObject:
   - component: {fileID: 2365098553173121798}
   - component: {fileID: 2365098553171827564}
   - component: {fileID: 2365098553170827564}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5900,7 +5841,7 @@ GameObject:
   - component: {fileID: 2365098553173121800}
   - component: {fileID: 2365098553171827582}
   - component: {fileID: 2365098553170827582}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5983,7 +5924,7 @@ GameObject:
   - component: {fileID: 2365098553173121802}
   - component: {fileID: 2365098553171827568}
   - component: {fileID: 2365098553170827568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6066,7 +6007,7 @@ GameObject:
   - component: {fileID: 2365098553173121804}
   - component: {fileID: 2365098553171827570}
   - component: {fileID: 2365098553170827570}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6149,7 +6090,7 @@ GameObject:
   - component: {fileID: 2365098553173121806}
   - component: {fileID: 2365098553171827572}
   - component: {fileID: 2365098553170827572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment105
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6232,7 +6173,7 @@ GameObject:
   - component: {fileID: 2365098553173121808}
   - component: {fileID: 2365098553171827462}
   - component: {fileID: 2365098553170827718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment098
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6315,7 +6256,7 @@ GameObject:
   - component: {fileID: 2365098553173121810}
   - component: {fileID: 2365098553171827576}
   - component: {fileID: 2365098553170827576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment099
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6398,7 +6339,7 @@ GameObject:
   - component: {fileID: 2365098553173121812}
   - component: {fileID: 2365098553171827578}
   - component: {fileID: 2365098553170827578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6481,7 +6422,7 @@ GameObject:
   - component: {fileID: 2365098553173121814}
   - component: {fileID: 2365098553171827580}
   - component: {fileID: 2365098553170827580}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6564,7 +6505,7 @@ GameObject:
   - component: {fileID: 2365098553173121816}
   - component: {fileID: 2365098553171827470}
   - component: {fileID: 2365098553170827726}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment094
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6647,7 +6588,7 @@ GameObject:
   - component: {fileID: 2365098553173121818}
   - component: {fileID: 2365098553171827456}
   - component: {fileID: 2365098553170827712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment095
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6730,7 +6671,7 @@ GameObject:
   - component: {fileID: 2365098553173121820}
   - component: {fileID: 2365098553171827458}
   - component: {fileID: 2365098553170827714}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment096
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6813,7 +6754,7 @@ GameObject:
   - component: {fileID: 2365098553173121822}
   - component: {fileID: 2365098553171827460}
   - component: {fileID: 2365098553170827716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment097
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6896,7 +6837,7 @@ GameObject:
   - component: {fileID: 2365098553173121952}
   - component: {fileID: 2365098553171827606}
   - component: {fileID: 2365098553170827350}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6979,7 +6920,7 @@ GameObject:
   - component: {fileID: 2365098553173121954}
   - component: {fileID: 2365098553171827592}
   - component: {fileID: 2365098553170827336}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7062,7 +7003,7 @@ GameObject:
   - component: {fileID: 2365098553173121956}
   - component: {fileID: 2365098553171827594}
   - component: {fileID: 2365098553170827338}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7145,7 +7086,7 @@ GameObject:
   - component: {fileID: 2365098553173121958}
   - component: {fileID: 2365098553171827596}
   - component: {fileID: 2365098553170827340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7228,7 +7169,7 @@ GameObject:
   - component: {fileID: 2365098553173121960}
   - component: {fileID: 2365098553171827614}
   - component: {fileID: 2365098553170827358}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7311,7 +7252,7 @@ GameObject:
   - component: {fileID: 2365098553173121962}
   - component: {fileID: 2365098553171827600}
   - component: {fileID: 2365098553170827344}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7394,7 +7335,7 @@ GameObject:
   - component: {fileID: 2365098553173121964}
   - component: {fileID: 2365098553171827602}
   - component: {fileID: 2365098553170827346}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7477,7 +7418,7 @@ GameObject:
   - component: {fileID: 2365098553173121966}
   - component: {fileID: 2365098553171827604}
   - component: {fileID: 2365098553170827348}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7560,7 +7501,7 @@ GameObject:
   - component: {fileID: 2365098553173121968}
   - component: {fileID: 2365098553171827622}
   - component: {fileID: 2365098553170827366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7643,7 +7584,7 @@ GameObject:
   - component: {fileID: 2365098553173121970}
   - component: {fileID: 2365098553171827608}
   - component: {fileID: 2365098553170827352}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7726,7 +7667,7 @@ GameObject:
   - component: {fileID: 2365098553173121972}
   - component: {fileID: 2365098553171827610}
   - component: {fileID: 2365098553170827354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7809,7 +7750,7 @@ GameObject:
   - component: {fileID: 2365098553173121974}
   - component: {fileID: 2365098553171827612}
   - component: {fileID: 2365098553170827356}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7892,7 +7833,7 @@ GameObject:
   - component: {fileID: 2365098553173121976}
   - component: {fileID: 2365098553171827630}
   - component: {fileID: 2365098553170827374}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7975,7 +7916,7 @@ GameObject:
   - component: {fileID: 2365098553173121978}
   - component: {fileID: 2365098553171827616}
   - component: {fileID: 2365098553170827360}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8058,7 +7999,7 @@ GameObject:
   - component: {fileID: 2365098553173121980}
   - component: {fileID: 2365098553171827618}
   - component: {fileID: 2365098553170827362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8141,7 +8082,7 @@ GameObject:
   - component: {fileID: 2365098553173121982}
   - component: {fileID: 2365098553171827620}
   - component: {fileID: 2365098553170827364}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8224,7 +8165,7 @@ GameObject:
   - component: {fileID: 2365098553173121600}
   - component: {fileID: 2365098553171827638}
   - component: {fileID: 2365098553170827382}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8307,7 +8248,7 @@ GameObject:
   - component: {fileID: 2365098553173121602}
   - component: {fileID: 2365098553171827624}
   - component: {fileID: 2365098553170827368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8390,7 +8331,7 @@ GameObject:
   - component: {fileID: 2365098553173121604}
   - component: {fileID: 2365098553171827626}
   - component: {fileID: 2365098553170827370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8473,7 +8414,7 @@ GameObject:
   - component: {fileID: 2365098553173121606}
   - component: {fileID: 2365098553171827628}
   - component: {fileID: 2365098553170827372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8556,7 +8497,7 @@ GameObject:
   - component: {fileID: 2365098553173121608}
   - component: {fileID: 2365098553171827646}
   - component: {fileID: 2365098553170827390}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8639,7 +8580,7 @@ GameObject:
   - component: {fileID: 2365098553173121610}
   - component: {fileID: 2365098553171827632}
   - component: {fileID: 2365098553170827376}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8722,7 +8663,7 @@ GameObject:
   - component: {fileID: 2365098553173121612}
   - component: {fileID: 2365098553171827634}
   - component: {fileID: 2365098553170827378}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8805,7 +8746,7 @@ GameObject:
   - component: {fileID: 2365098553173121614}
   - component: {fileID: 2365098553171827636}
   - component: {fileID: 2365098553170827380}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8888,7 +8829,7 @@ GameObject:
   - component: {fileID: 2365098553173121616}
   - component: {fileID: 2365098553171827270}
   - component: {fileID: 2365098553170827270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8971,7 +8912,7 @@ GameObject:
   - component: {fileID: 2365098553173121618}
   - component: {fileID: 2365098553171827640}
   - component: {fileID: 2365098553170827384}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9054,7 +8995,7 @@ GameObject:
   - component: {fileID: 2365098553173121620}
   - component: {fileID: 2365098553171827642}
   - component: {fileID: 2365098553170827386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9137,7 +9078,7 @@ GameObject:
   - component: {fileID: 2365098553173121622}
   - component: {fileID: 2365098553171827644}
   - component: {fileID: 2365098553170827388}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9220,7 +9161,7 @@ GameObject:
   - component: {fileID: 2365098553173121624}
   - component: {fileID: 2365098553171827278}
   - component: {fileID: 2365098553170827278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleBase004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9303,7 +9244,7 @@ GameObject:
   - component: {fileID: 2365098553173121626}
   - component: {fileID: 2365098553171827264}
   - component: {fileID: 2365098553170827264}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleBase005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9386,7 +9327,7 @@ GameObject:
   - component: {fileID: 2365098553173121628}
   - component: {fileID: 2365098553171827266}
   - component: {fileID: 2365098553170827266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9469,7 +9410,7 @@ GameObject:
   - component: {fileID: 2365098553173121630}
   - component: {fileID: 2365098553171827268}
   - component: {fileID: 2365098553170827268}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9552,7 +9493,7 @@ GameObject:
   - component: {fileID: 2365098553173122016}
   - component: {fileID: 2365098553171827670}
   - component: {fileID: 2365098553170827670}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment058
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9635,7 +9576,7 @@ GameObject:
   - component: {fileID: 2365098553173122018}
   - component: {fileID: 2365098553171827656}
   - component: {fileID: 2365098553170827656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment059
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9718,7 +9659,7 @@ GameObject:
   - component: {fileID: 2365098553173122020}
   - component: {fileID: 2365098553171827658}
   - component: {fileID: 2365098553170827658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment060
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9801,7 +9742,7 @@ GameObject:
   - component: {fileID: 2365098553173122022}
   - component: {fileID: 2365098553171827660}
   - component: {fileID: 2365098553170827660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment061
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9885,7 +9826,7 @@ GameObject:
   - component: {fileID: 2365098553173122024}
   - component: {fileID: 2365098553171827678}
   - component: {fileID: 2365098553170827678}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment054
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9968,7 +9909,7 @@ GameObject:
   - component: {fileID: 2365098553173122026}
   - component: {fileID: 2365098553171827664}
   - component: {fileID: 2365098553170827664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment055
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10051,7 +9992,7 @@ GameObject:
   - component: {fileID: 2365098553173122028}
   - component: {fileID: 2365098553171827666}
   - component: {fileID: 2365098553170827666}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment056
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10134,7 +10075,7 @@ GameObject:
   - component: {fileID: 2365098553173122030}
   - component: {fileID: 2365098553171827668}
   - component: {fileID: 2365098553170827668}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment057
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10218,7 +10159,7 @@ GameObject:
   - component: {fileID: 2365098553173122032}
   - component: {fileID: 2365098553171827686}
   - component: {fileID: 2365098553170827686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10301,7 +10242,7 @@ GameObject:
   - component: {fileID: 2365098553173122034}
   - component: {fileID: 2365098553171827672}
   - component: {fileID: 2365098553170827672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10384,7 +10325,7 @@ GameObject:
   - component: {fileID: 2365098553173122036}
   - component: {fileID: 2365098553171827674}
   - component: {fileID: 2365098553170827674}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10467,7 +10408,7 @@ GameObject:
   - component: {fileID: 2365098553173122038}
   - component: {fileID: 2365098553171827676}
   - component: {fileID: 2365098553170827676}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10550,7 +10491,7 @@ GameObject:
   - component: {fileID: 2365098553173122040}
   - component: {fileID: 2365098553171827694}
   - component: {fileID: 2365098553170827694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10633,7 +10574,7 @@ GameObject:
   - component: {fileID: 2365098553173122042}
   - component: {fileID: 2365098553171827680}
   - component: {fileID: 2365098553170827680}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10716,7 +10657,7 @@ GameObject:
   - component: {fileID: 2365098553173122044}
   - component: {fileID: 2365098553171827682}
   - component: {fileID: 2365098553170827682}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10799,7 +10740,7 @@ GameObject:
   - component: {fileID: 2365098553173122046}
   - component: {fileID: 2365098553171827684}
   - component: {fileID: 2365098553170827684}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10882,7 +10823,7 @@ GameObject:
   - component: {fileID: 2365098553173121920}
   - component: {fileID: 2365098553171827702}
   - component: {fileID: 2365098553170827702}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10965,7 +10906,7 @@ GameObject:
   - component: {fileID: 2365098553173121922}
   - component: {fileID: 2365098553171827688}
   - component: {fileID: 2365098553170827688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11048,7 +10989,7 @@ GameObject:
   - component: {fileID: 2365098553173121924}
   - component: {fileID: 2365098553171827690}
   - component: {fileID: 2365098553170827690}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11131,7 +11072,7 @@ GameObject:
   - component: {fileID: 2365098553173121926}
   - component: {fileID: 2365098553171827692}
   - component: {fileID: 2365098553170827692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment045
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11214,7 +11155,7 @@ GameObject:
   - component: {fileID: 2365098553173121928}
   - component: {fileID: 2365098553171827710}
   - component: {fileID: 2365098553170827710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11297,7 +11238,7 @@ GameObject:
   - component: {fileID: 2365098553173121930}
   - component: {fileID: 2365098553171827696}
   - component: {fileID: 2365098553170827696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11380,7 +11321,7 @@ GameObject:
   - component: {fileID: 2365098553173121932}
   - component: {fileID: 2365098553171827698}
   - component: {fileID: 2365098553170827698}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11463,7 +11404,7 @@ GameObject:
   - component: {fileID: 2365098553173121934}
   - component: {fileID: 2365098553171827700}
   - component: {fileID: 2365098553170827700}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11546,7 +11487,7 @@ GameObject:
   - component: {fileID: 2365098553173121936}
   - component: {fileID: 2365098553171827590}
   - component: {fileID: 2365098553170827334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11629,7 +11570,7 @@ GameObject:
   - component: {fileID: 2365098553173121938}
   - component: {fileID: 2365098553171827704}
   - component: {fileID: 2365098553170827704}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11712,7 +11653,7 @@ GameObject:
   - component: {fileID: 2365098553173121940}
   - component: {fileID: 2365098553171827706}
   - component: {fileID: 2365098553170827706}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11795,7 +11736,7 @@ GameObject:
   - component: {fileID: 2365098553173121942}
   - component: {fileID: 2365098553171827708}
   - component: {fileID: 2365098553170827708}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11878,7 +11819,7 @@ GameObject:
   - component: {fileID: 2365098553173121944}
   - component: {fileID: 2365098553171827598}
   - component: {fileID: 2365098553170827342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11961,7 +11902,7 @@ GameObject:
   - component: {fileID: 2365098553173121946}
   - component: {fileID: 2365098553171827584}
   - component: {fileID: 2365098553170827328}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12044,7 +11985,7 @@ GameObject:
   - component: {fileID: 2365098553173121948}
   - component: {fileID: 2365098553171827586}
   - component: {fileID: 2365098553170827330}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12127,7 +12068,7 @@ GameObject:
   - component: {fileID: 2365098553173121950}
   - component: {fileID: 2365098553171827588}
   - component: {fileID: 2365098553170827332}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_TentacleSegment033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12209,7 +12150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122080}
   - component: {fileID: 2365098553172984248}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12258,7 +12199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122082}
   - component: {fileID: 2365098553172984247}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12306,7 +12247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122084}
   - component: {fileID: 2365098553172984246}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12354,7 +12295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122086}
   - component: {fileID: 2365098553172984245}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12403,7 +12344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122088}
   - component: {fileID: 2365098553172984144}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12452,7 +12393,8 @@ GameObject:
   - component: {fileID: 2365098553173122090}
   - component: {fileID: 2365098553172984131}
   - component: {fileID: 3931828523960568047}
-  m_Layer: 0
+  - component: {fileID: 1342139518653451543}
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12473,6 +12415,7 @@ Transform:
   m_Children:
   - {fileID: 2365098553173121636}
   - {fileID: 2365098553173122064}
+  - {fileID: 9075584531319084568}
   m_Father: {fileID: 2365098553173122236}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12502,6 +12445,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7007f0537289a429e7ce93c92d22ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetedObject: {fileID: 9077972962431117460}
+--- !u!54 &1342139518653451543
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365098553173018634}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2365098553173018636
 GameObject:
   m_ObjectHideFlags: 0
@@ -12512,7 +12472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122092}
   - component: {fileID: 2365098553172984250}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12561,7 +12521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122094}
   - component: {fileID: 2365098553172984249}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12610,7 +12570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122096}
   - component: {fileID: 2365098553172984148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12658,7 +12618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122098}
   - component: {fileID: 2365098553172984147}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12706,7 +12666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122100}
   - component: {fileID: 2365098553172984146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12755,7 +12715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122102}
   - component: {fileID: 2365098553172984145}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12803,7 +12763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122104}
   - component: {fileID: 2365098553172984133}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12851,7 +12811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122106}
   - component: {fileID: 2365098553172984132}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12898,7 +12858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122108}
   - component: {fileID: 2365098553172984150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12946,7 +12906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122110}
   - component: {fileID: 2365098553172984149}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12995,7 +12955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122240}
   - component: {fileID: 2365098553172984136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13043,7 +13003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122242}
   - component: {fileID: 2365098553172984135}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13092,7 +13052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122244}
   - component: {fileID: 2365098553172984134}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13141,7 +13101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122246}
   - component: {fileID: 2365098553172984151}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13189,7 +13149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122248}
   - component: {fileID: 2365098553172984140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13238,7 +13198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122250}
   - component: {fileID: 2365098553172984139}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13287,7 +13247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122252}
   - component: {fileID: 2365098553172984138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13336,7 +13296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122254}
   - component: {fileID: 2365098553172984137}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13385,7 +13345,8 @@ GameObject:
   - component: {fileID: 2365098553173122256}
   - component: {fileID: 2365098553172984152}
   - component: {fileID: 4435764381696540744}
-  m_Layer: 0
+  - component: {fileID: 3657609809505526658}
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13406,6 +13367,7 @@ Transform:
   m_Children:
   - {fileID: 2365098553173121634}
   - {fileID: 2365098553173122246}
+  - {fileID: 5560527974384669867}
   m_Father: {fileID: 2365098553173122236}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13435,6 +13397,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7007f0537289a429e7ce93c92d22ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetedObject: {fileID: 5558412805869234727}
+--- !u!54 &3657609809505526658
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365098553173018672}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2365098553173018674
 GameObject:
   m_ObjectHideFlags: 0
@@ -13445,7 +13424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122258}
   - component: {fileID: 2365098553172984143}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13493,7 +13472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122260}
   - component: {fileID: 2365098553172984142}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13541,7 +13520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122262}
   - component: {fileID: 2365098553172984141}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_B_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13590,7 +13569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122264}
   - component: {fileID: 2365098553172984168}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13638,7 +13617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122266}
   - component: {fileID: 2365098553172984167}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13686,7 +13665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122268}
   - component: {fileID: 2365098553172984166}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13734,7 +13713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122270}
   - component: {fileID: 2365098553172984165}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13782,7 +13761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122144}
   - component: {fileID: 2365098553172984236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13830,7 +13809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122146}
   - component: {fileID: 2365098553172984235}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13878,7 +13857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122148}
   - component: {fileID: 2365098553172984234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13926,7 +13905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122150}
   - component: {fileID: 2365098553172984233}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13974,7 +13953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122152}
   - component: {fileID: 2365098553172984220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14022,7 +14001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122154}
   - component: {fileID: 2365098553172984237}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14071,7 +14050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122156}
   - component: {fileID: 2365098553172984219}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14119,7 +14098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122158}
   - component: {fileID: 2365098553172984218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14166,7 +14145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122160}
   - component: {fileID: 2365098553172984224}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14214,7 +14193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122162}
   - component: {fileID: 2365098553172984223}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14262,7 +14241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122164}
   - component: {fileID: 2365098553172984222}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14310,7 +14289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122166}
   - component: {fileID: 2365098553172984221}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14358,7 +14337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122168}
   - component: {fileID: 2365098553172984228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14406,7 +14385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122170}
   - component: {fileID: 2365098553172984227}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14454,7 +14433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122172}
   - component: {fileID: 2365098553172984226}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14502,7 +14481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122174}
   - component: {fileID: 2365098553172984225}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14550,7 +14529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122048}
   - component: {fileID: 2365098553172984252}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14598,7 +14577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122050}
   - component: {fileID: 2365098553172984251}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14648,7 +14627,8 @@ GameObject:
   - component: {fileID: 2365098553173122052}
   - component: {fileID: 2365098553172984238}
   - component: {fileID: 4404583618727143066}
-  m_Layer: 0
+  - component: {fileID: 2430969781575007780}
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14669,6 +14649,7 @@ Transform:
   m_Children:
   - {fileID: 2365098553173121638}
   - {fileID: 2365098553173122154}
+  - {fileID: 3324213313579203925}
   m_Father: {fileID: 2365098553173122236}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14698,6 +14679,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7007f0537289a429e7ce93c92d22ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetedObject: {fileID: 3326047006849254361}
+--- !u!54 &2430969781575007780
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365098553173018724}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2365098553173018726
 GameObject:
   m_ObjectHideFlags: 0
@@ -14708,7 +14706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122054}
   - component: {fileID: 2365098553172984229}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14756,7 +14754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122056}
   - component: {fileID: 2365098553172984128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14805,7 +14803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122058}
   - component: {fileID: 2365098553172984255}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14853,7 +14851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122060}
   - component: {fileID: 2365098553172984254}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14902,7 +14900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122062}
   - component: {fileID: 2365098553172984253}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14951,7 +14949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122064}
   - component: {fileID: 2365098553172984130}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14999,7 +14997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122066}
   - component: {fileID: 2365098553172984240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15047,7 +15045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122068}
   - component: {fileID: 2365098553172984239}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15094,7 +15092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122070}
   - component: {fileID: 2365098553172984129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15142,7 +15140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122072}
   - component: {fileID: 2365098553172984244}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15190,7 +15188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122074}
   - component: {fileID: 2365098553172984243}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15238,7 +15236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122076}
   - component: {fileID: 2365098553172984242}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15286,7 +15284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122078}
   - component: {fileID: 2365098553172984241}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_C_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15335,7 +15333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122208}
   - component: {fileID: 2365098553172984293}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftRear_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15382,7 +15380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122210}
   - component: {fileID: 2365098553172984292}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftRear_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15430,7 +15428,7 @@ GameObject:
   - component: {fileID: 2365098553173122212}
   - component: {fileID: 2365098553172984291}
   - component: {fileID: 2365098553172984183}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftRear_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15491,7 +15489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122214}
   - component: {fileID: 2365098553172984290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftRear_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15539,7 +15537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122216}
   - component: {fileID: 2365098553172984298}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftMiddle_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15586,7 +15584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122218}
   - component: {fileID: 2365098553172984297}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftMiddle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15634,7 +15632,7 @@ GameObject:
   - component: {fileID: 2365098553173122220}
   - component: {fileID: 2365098553172984296}
   - component: {fileID: 2365098553172984295}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftMiddle_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15695,7 +15693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122222}
   - component: {fileID: 2365098553172984294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftMiddle_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15743,7 +15741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122224}
   - component: {fileID: 2365098553172984303}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftFront_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15790,7 +15788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122226}
   - component: {fileID: 2365098553172984302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftFront_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15838,7 +15836,7 @@ GameObject:
   - component: {fileID: 2365098553173122228}
   - component: {fileID: 2365098553172984301}
   - component: {fileID: 2365098553172984300}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftFront_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15899,7 +15897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122230}
   - component: {fileID: 2365098553172984299}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegLeftFront_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15948,7 +15946,7 @@ GameObject:
   - component: {fileID: 2365098553173122232}
   - component: {fileID: 2330053780797970003}
   - component: {fileID: 4632024172132341909}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ArmRight_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16007,7 +16005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365098553173122234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16052,7 +16050,7 @@ GameObject:
   - component: {fileID: 2365098553173122236}
   - component: {fileID: 6545156869793230670}
   - component: {fileID: 119001573878700802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16089,7 +16087,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2365098553173018780}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 8.18
@@ -16117,7 +16115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365098553173122238}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16137,9 +16135,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5857694679713012611}
-  - {fileID: 3067827505290655118}
-  - {fileID: 9196726589971808966}
   - {fileID: 6094393665660708937}
   m_Father: {fileID: 2365098553173122236}
   m_RootOrder: 0
@@ -16154,7 +16149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173121856}
   - component: {fileID: 3593956002708877710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ArmLeft_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16202,7 +16197,7 @@ GameObject:
   - component: {fileID: 2365098553173121858}
   - component: {fileID: 2014067734458537485}
   - component: {fileID: 5401633449532336593}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ArmLeft_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16262,7 +16257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173121860}
   - component: {fileID: 447812141452436339}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ArmRight_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16309,7 +16304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173121862}
   - component: {fileID: 6959471135923076006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ArmRight_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16357,7 +16352,7 @@ GameObject:
   - component: {fileID: 2365098553173121864}
   - component: {fileID: 2365098553171827902}
   - component: {fileID: 2365098553170827646}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16440,7 +16435,7 @@ GameObject:
   - component: {fileID: 2365098553173121866}
   - component: {fileID: 2365098553171827888}
   - component: {fileID: 2365098553170827632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16523,7 +16518,7 @@ GameObject:
   - component: {fileID: 2365098553173121868}
   - component: {fileID: 2365098553171827890}
   - component: {fileID: 2365098553170827634}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16605,7 +16600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173121870}
   - component: {fileID: 2394994063585028500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ArmLeft_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16653,7 +16648,7 @@ GameObject:
   - component: {fileID: 2365098553173121872}
   - component: {fileID: 2365098553171827526}
   - component: {fileID: 2365098553170827526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16736,7 +16731,7 @@ GameObject:
   - component: {fileID: 2365098553173121874}
   - component: {fileID: 2365098553171827896}
   - component: {fileID: 2365098553170827640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16819,7 +16814,7 @@ GameObject:
   - component: {fileID: 2365098553173121876}
   - component: {fileID: 2365098553171827898}
   - component: {fileID: 2365098553170827642}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16902,7 +16897,7 @@ GameObject:
   - component: {fileID: 2365098553173121878}
   - component: {fileID: 2365098553171827900}
   - component: {fileID: 2365098553170827644}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16985,7 +16980,7 @@ GameObject:
   - component: {fileID: 2365098553173121880}
   - component: {fileID: 2365098553171827534}
   - component: {fileID: 2365098553170827534}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17068,7 +17063,7 @@ GameObject:
   - component: {fileID: 2365098553173121882}
   - component: {fileID: 2365098553171827520}
   - component: {fileID: 2365098553170827520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17151,7 +17146,7 @@ GameObject:
   - component: {fileID: 2365098553173121884}
   - component: {fileID: 2365098553171827522}
   - component: {fileID: 2365098553170827522}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17234,7 +17229,7 @@ GameObject:
   - component: {fileID: 2365098553173121886}
   - component: {fileID: 2365098553171827524}
   - component: {fileID: 2365098553170827524}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_Titanockarce_WeakPointBackShell_SplitPart_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17316,7 +17311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122272}
   - component: {fileID: 2365098553172984153}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17363,7 +17358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122274}
   - component: {fileID: 2365098553172984171}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17412,7 +17407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122276}
   - component: {fileID: 2365098553172984170}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17460,7 +17455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122278}
   - component: {fileID: 2365098553172984169}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17508,7 +17503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122280}
   - component: {fileID: 2365098553172984156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17556,7 +17551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122282}
   - component: {fileID: 2365098553172984155}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17604,7 +17599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122284}
   - component: {fileID: 2365098553172984172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17652,7 +17647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122286}
   - component: {fileID: 2365098553172984154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17701,7 +17696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122288}
   - component: {fileID: 2365098553172984160}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17749,7 +17744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122290}
   - component: {fileID: 2365098553172984159}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17797,7 +17792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122292}
   - component: {fileID: 2365098553172984158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17845,7 +17840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122294}
   - component: {fileID: 2365098553172984157}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17893,7 +17888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122296}
   - component: {fileID: 2365098553172984164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17941,7 +17936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122298}
   - component: {fileID: 2365098553172984163}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17989,7 +17984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122300}
   - component: {fileID: 2365098553172984162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18037,7 +18032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122302}
   - component: {fileID: 2365098553172984161}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18085,7 +18080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122176}
   - component: {fileID: 2365098553172984176}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_Tail_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18132,7 +18127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122178}
   - component: {fileID: 2365098553172984177}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_Tail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18180,7 +18175,7 @@ GameObject:
   - component: {fileID: 2365098553173122180}
   - component: {fileID: 2365098553172984179}
   - component: {fileID: 2365098553172984178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_Tail_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18242,7 +18237,8 @@ GameObject:
   - component: {fileID: 2365098553173122182}
   - component: {fileID: 2365098553172984173}
   - component: {fileID: 2100851950112293530}
-  m_Layer: 0
+  - component: {fileID: 7267429991245159184}
+  m_Layer: 10
   m_Name: Titanockarce_TentacleLeft_A_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18263,6 +18259,7 @@ Transform:
   m_Children:
   - {fileID: 2365098553173121632}
   - {fileID: 2365098553173122284}
+  - {fileID: 2211215879005778855}
   m_Father: {fileID: 2365098553173122236}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18292,6 +18289,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7007f0537289a429e7ce93c92d22ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetedObject: {fileID: 2208546556361362731}
+--- !u!54 &7267429991245159184
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365098553173018854}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2365098553173018856
 GameObject:
   m_ObjectHideFlags: 0
@@ -18302,7 +18316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122184}
   - component: {fileID: 2365098553172984281}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightRear_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18349,7 +18363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122186}
   - component: {fileID: 2365098553172984280}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightRear_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18397,7 +18411,7 @@ GameObject:
   - component: {fileID: 2365098553173122188}
   - component: {fileID: 2365098553172984279}
   - component: {fileID: 2699240023458544354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightRear_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18458,7 +18472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122190}
   - component: {fileID: 5849905605828093765}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightRear_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18506,7 +18520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122192}
   - component: {fileID: 2365098553172984285}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightMiddle_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18553,7 +18567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122194}
   - component: {fileID: 2365098553172984284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightMiddle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18601,7 +18615,7 @@ GameObject:
   - component: {fileID: 2365098553173122196}
   - component: {fileID: 2365098553172984283}
   - component: {fileID: 5339345238143669272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightMiddle_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18662,7 +18676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122198}
   - component: {fileID: 1448335783285913337}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightMiddle_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18710,7 +18724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122200}
   - component: {fileID: 2365098553172984289}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightFront_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18757,7 +18771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122202}
   - component: {fileID: 2365098553172984288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightFront_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18805,7 +18819,7 @@ GameObject:
   - component: {fileID: 2365098553173122204}
   - component: {fileID: 2365098553172984287}
   - component: {fileID: 2365098553172984182}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightFront_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18866,7 +18880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122206}
   - component: {fileID: 2365098553172984181}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_LegRightFront_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18914,7 +18928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122464}
   - component: {fileID: 2365098553172984312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18963,7 +18977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122466}
   - component: {fileID: 2365098553172984311}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19012,7 +19026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122468}
   - component: {fileID: 2365098553172984310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19060,7 +19074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122470}
   - component: {fileID: 2365098553172984309}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19110,7 +19124,8 @@ GameObject:
   - component: {fileID: 2365098553173122472}
   - component: {fileID: 2365098553172984196}
   - component: {fileID: 6236794890951307029}
-  m_Layer: 0
+  - component: {fileID: 8530152879426317743}
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19131,6 +19146,7 @@ Transform:
   m_Children:
   - {fileID: 2365098553173121626}
   - {fileID: 2365098553173122462}
+  - {fileID: 5439257094077742153}
   m_Father: {fileID: 2365098553173122236}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19160,6 +19176,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7007f0537289a429e7ce93c92d22ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetedObject: {fileID: 5437423400538964677}
+--- !u!54 &8530152879426317743
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365098553173019016}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2365098553173019018
 GameObject:
   m_ObjectHideFlags: 0
@@ -19170,7 +19203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122474}
   - component: {fileID: 2365098553172984315}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19218,7 +19251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122476}
   - component: {fileID: 2365098553172984314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19267,7 +19300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122478}
   - component: {fileID: 2365098553172984313}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19315,7 +19348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122480}
   - component: {fileID: 2365098553172984212}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19363,7 +19396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122482}
   - component: {fileID: 2365098553172984211}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19411,7 +19444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122484}
   - component: {fileID: 2365098553172984210}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19459,7 +19492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122486}
   - component: {fileID: 2365098553172984209}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19508,7 +19541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122488}
   - component: {fileID: 2365098553172984197}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19555,7 +19588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122490}
   - component: {fileID: 2365098553172984215}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19603,7 +19636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122492}
   - component: {fileID: 2365098553172984214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19651,7 +19684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122494}
   - component: {fileID: 2365098553172984213}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19700,7 +19733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122112}
   - component: {fileID: 2365098553172984200}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19749,7 +19782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122114}
   - component: {fileID: 2365098553172984199}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19798,7 +19831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122116}
   - component: {fileID: 2365098553172984216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19846,7 +19879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122118}
   - component: {fileID: 2365098553172984198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19894,7 +19927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122120}
   - component: {fileID: 2365098553172984204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19942,7 +19975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122122}
   - component: {fileID: 2365098553172984203}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19991,7 +20024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122124}
   - component: {fileID: 2365098553172984202}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20040,7 +20073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122126}
   - component: {fileID: 2365098553172984201}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20088,7 +20121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122128}
   - component: {fileID: 2365098553172984208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20137,7 +20170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122130}
   - component: {fileID: 2365098553172984207}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20185,7 +20218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122132}
   - component: {fileID: 2365098553172984206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20233,7 +20266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122134}
   - component: {fileID: 2365098553172984205}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20281,7 +20314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122136}
   - component: {fileID: 2365098553172984232}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20329,7 +20362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122138}
   - component: {fileID: 2365098553172984231}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20377,7 +20410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122140}
   - component: {fileID: 2365098553172984230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_A_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20426,7 +20459,8 @@ GameObject:
   - component: {fileID: 2365098553173122142}
   - component: {fileID: 2365098553172984217}
   - component: {fileID: 5392675286256645212}
-  m_Layer: 0
+  - component: {fileID: 7001297379161358616}
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_B_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20447,6 +20481,7 @@ Transform:
   m_Children:
   - {fileID: 2365098553173121624}
   - {fileID: 2365098553173122116}
+  - {fileID: 6343105254081817228}
   m_Father: {fileID: 2365098553173122236}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20476,6 +20511,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7007f0537289a429e7ce93c92d22ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetedObject: {fileID: 6345212175991608320}
+--- !u!54 &7001297379161358616
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365098553173019070}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2365098553173019096
 GameObject:
   m_ObjectHideFlags: 0
@@ -20485,7 +20537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365098553173122552}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_WeakPointBackShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20543,7 +20595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122554}
   - component: {fileID: 4070766389858028918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_WeakPointTail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20587,7 +20639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365098553173122556}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20619,7 +20671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122432}
   - component: {fileID: 2365098553172984316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20668,7 +20720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122434}
   - component: {fileID: 6265326149108352578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ThumbLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20713,7 +20765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122436}
   - component: {fileID: 8836718674753266585}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_ThumbRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20758,7 +20810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122438}
   - component: {fileID: 1467082489104938236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_WeakPointBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20804,7 +20856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122440}
   - component: {fileID: 2365098553172984192}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20852,7 +20904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122442}
   - component: {fileID: 2365098553172984319}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20901,7 +20953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122444}
   - component: {fileID: 2365098553172984318}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20949,7 +21001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122446}
   - component: {fileID: 2365098553172984317}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20998,7 +21050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122448}
   - component: {fileID: 2365098553172984305}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21046,7 +21098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122450}
   - component: {fileID: 2365098553172984304}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21093,7 +21145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122452}
   - component: {fileID: 2365098553172984194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21142,7 +21194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122454}
   - component: {fileID: 2365098553172984193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21191,7 +21243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122456}
   - component: {fileID: 2365098553172984308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_017.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21240,7 +21292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122458}
   - component: {fileID: 2365098553172984307}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21289,7 +21341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122460}
   - component: {fileID: 2365098553172984306}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21338,7 +21390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553173122462}
   - component: {fileID: 2365098553172984195}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Titanockarce_TentacleRight_C_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21386,7 +21438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2365098553257448276}
   - component: {fileID: 2365098553257448277}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (5)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -21421,65 +21473,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &2686366860051585656
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5857694679713012611}
-  - component: {fileID: 1020609068853279}
-  - component: {fileID: 1548276198691169424}
-  m_Layer: 0
-  m_Name: Collider_Jaw
-  m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5857694679713012611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686366860051585656}
-  m_LocalRotation: {x: 0.12025737, y: 0.69685495, z: -0.13445798, w: 0.6941559}
-  m_LocalPosition: {x: 1.87, y: -2.53, z: -0}
-  m_LocalScale: {x: 1.2962, y: 1.3334925, z: 0.93441}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2365098553173122238}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.754002, y: 90.008, z: -1.1680001}
---- !u!65 &1020609068853279
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686366860051585656}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.06, y: 1.61, z: 3.51}
-  m_Center: {x: 0, y: 0, z: -1.58}
---- !u!65 &1548276198691169424
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2686366860051585656}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.31, y: 1.42, z: 4.91}
-  m_Center: {x: 0, y: 0, z: -5.64}
 --- !u!1 &3920401111110404946
 GameObject:
   m_ObjectHideFlags: 0
@@ -21491,7 +21484,7 @@ GameObject:
   - component: {fileID: 5665238432916378084}
   - component: {fileID: 4558100863604096756}
   - component: {fileID: 5791901638100884483}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_Spike (8)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -21549,7 +21542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9000406958938448369}
   - component: {fileID: 7813693384552567347}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_WeakPointBackBackShell (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21595,7 +21588,7 @@ GameObject:
   - component: {fileID: 9086007979495979012}
   - component: {fileID: 4078130525632287202}
   - component: {fileID: 7947638449428267546}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_Spike (11)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -21654,7 +21647,7 @@ GameObject:
   - component: {fileID: 6454349663073388628}
   - component: {fileID: 3994502081002791771}
   - component: {fileID: 5927898718152795662}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_Spike (10)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -21712,7 +21705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3856294626120115186}
   - component: {fileID: 8363740204838428981}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_WeakPointBackBackShell (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21758,7 +21751,7 @@ GameObject:
   - component: {fileID: 4812958490337705441}
   - component: {fileID: 5348392457021351180}
   - component: {fileID: 5940897579327723781}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_Spike (9)
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -21816,7 +21809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445275159172607067}
   - component: {fileID: 4867837501571618474}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_WeakPointBackBackShell (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21861,7 +21854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013166974307977590}
   - component: {fileID: 1208765672837980454}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (11)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -21906,7 +21899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 967894659249580180}
   - component: {fileID: 9002983489236963450}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ColliderSpike (10)
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -21941,65 +21934,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &7584624495812729925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3067827505290655118}
-  - component: {fileID: 5430417845752628120}
-  - component: {fileID: 7259943853898723499}
-  m_Layer: 0
-  m_Name: Collider_Jaw (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3067827505290655118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7584624495812729925}
-  m_LocalRotation: {x: 0.34076935, y: 0.65123564, z: 0.16565338, w: 0.6575161}
-  m_LocalPosition: {x: 2.36, y: -1.55, z: -1.53}
-  m_LocalScale: {x: 1.8948967, y: 1, z: 0.93441}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2365098553173122238}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 13.436001, y: 94.745, z: 42.867}
---- !u!65 &5430417845752628120
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7584624495812729925}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.06, y: 1.61, z: 3.51}
-  m_Center: {x: 0, y: 0, z: -1.58}
---- !u!65 &7259943853898723499
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7584624495812729925}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.31, y: 1.42, z: 4.91}
-  m_Center: {x: 0, y: 0, z: -5.64}
 --- !u!1 &8168432512178361527
 GameObject:
   m_ObjectHideFlags: 0
@@ -22010,7 +21944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32132045785829194}
   - component: {fileID: 8639519405974494791}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider_WeakPointBackBackShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22054,10 +21988,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6094393665660708937}
-  - component: {fileID: 5590991233793966171}
-  - component: {fileID: 7589419340283637614}
   - component: {fileID: 104120606289133390}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22077,58 +22009,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2365098553173122238}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5590991233793966171
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8758905991583139713}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7589419340283637614
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8758905991583139713}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &104120606289133390
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22137,8 +22019,422 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8758905991583139713}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.50000036
   m_Center: {x: 0.0000019073498, y: 0, z: 0.0000057220495}
+--- !u!1001 &2206798347346006463
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2365098553173122182}
+    m_Modifications:
+    - target: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_Name
+      value: Target5white
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+--- !u!1 &2208546556361362731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 2206798347346006463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2211215879005778855 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 2206798347346006463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3327654497658789709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2365098553173122052}
+    m_Modifications:
+    - target: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_Name
+      value: Target5white
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+--- !u!4 &3324213313579203925 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 3327654497658789709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3326047006849254361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 3327654497658789709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5436919822613683793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2365098553173122472}
+    m_Modifications:
+    - target: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_Name
+      value: Target5white
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+--- !u!1 &5437423400538964677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 5436919822613683793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5439257094077742153 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 5436919822613683793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5558911972885395123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2365098553173122256}
+    m_Modifications:
+    - target: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_Name
+      value: Target5white
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+--- !u!1 &5558412805869234727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 5558911972885395123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5560527974384669867 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 5558911972885395123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6343587088702113940
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2365098553173122142}
+    m_Modifications:
+    - target: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_Name
+      value: Target5white
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+--- !u!4 &6343105254081817228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 6343587088702113940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6345212175991608320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 6343587088702113940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9078476522139956224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2365098553173122090}
+    m_Modifications:
+    - target: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_Name
+      value: Target5white
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a131564fa8dd844891a942a0618c726, type: 3}
+--- !u!4 &9075584531319084568 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4448933244690968, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 9078476522139956224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9077972962431117460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1770230391938196, guid: 1a131564fa8dd844891a942a0618c726,
+    type: 3}
+  m_PrefabInstance: {fileID: 9078476522139956224}
+  m_PrefabAsset: {fileID: 0}

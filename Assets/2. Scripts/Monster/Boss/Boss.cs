@@ -9,6 +9,7 @@ public class Boss : MonoBehaviour
     private Animator animator;
     private List<BossArmHeadCollider> bossArms = null;
     [SerializeField] private List<Renderer> bodyRenderer = null;
+    private Rigidbody[] rigids;
 
     [HideInInspector]  public PlayerController target;
     // Start is called before the first frame update
@@ -21,6 +22,12 @@ public class Boss : MonoBehaviour
 
         foreach (var renderer in bodyRenderer)
             renderer.material.SetFloat("_NoiseScale", 50f);
+        rigids = GetComponentsInChildren<Rigidbody>();
+    }
+
+    public void AttackColliderActive(bool isActive)
+    {
+        foreach (var arm in bossArms) arm.CollidersTriggerOn(!isActive);
     }
 
    

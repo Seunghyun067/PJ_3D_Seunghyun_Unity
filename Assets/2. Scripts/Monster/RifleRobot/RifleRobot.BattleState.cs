@@ -53,7 +53,8 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
             {                
                 if (!isCharging)
                 {
-                    owner.chargingEffect = ObjectPooling.Instance.PopObject("Charge Particles");
+                    Debug.Log("Charged");
+                    owner.chargingEffect = ObjectPooling.Instance.PopObject("ChargeParticles");
                     owner.chargingEffect.transform.position = owner.shootPosition.position;
                     isCharging = true;
                 }

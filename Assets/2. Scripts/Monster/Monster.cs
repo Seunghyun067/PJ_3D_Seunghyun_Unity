@@ -120,6 +120,8 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         player = FindObjectOfType<PlayerController>();
+
+        myRenderer = GetComponentsInChildren<Renderer>();
     }
 
     public bool IsTarget()

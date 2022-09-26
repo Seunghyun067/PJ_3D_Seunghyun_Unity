@@ -1312,7 +1312,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9dbf79b666bfd384eb3ab1c6a86fa74c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1331,11 +1331,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1162c3a2dd6d4444c9a29ecf8c2d26e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerPosition: {fileID: 0}
+  centerPosition: {fileID: 8694943018831317037}
   findTargetDst: 5
   findTargetLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   gizmoColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!143 &7876457040380443830
 CharacterController:
