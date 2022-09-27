@@ -2,13 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour, IDamable
 {
     private int comboAttackCount { get; set; } = 0;
-
-    //[SerializeField] private TrailRenderer katanaTrail;
-    //[SerializeField] public Collider katanaCollider;
 
     [SerializeField] public Transform camTransform;
     [SerializeField] bool autoTargetting = true;
@@ -18,7 +16,18 @@ public class PlayerController : MonoBehaviour, IDamable
     [SerializeField] public float moveSpeed { get; } = 5;
     [SerializeField] public float rotSpeed { get; } = 5;
     [SerializeField] public int attackDamage { get; } = 5;
-    [SerializeField] private int hp = 10;
+    [SerializeField] private int maxHp = 100;
+
+    private int hp = 10;
+    public int Hp
+    {
+        get { return hp; }
+        set
+        {
+            hp = value;
+            TransHpEvent?.Invoke(hp, maxHp);
+        }
+    }
 
     private ITargetable attackTarget;
     private Transform targetTransform = null;
@@ -31,7 +40,7 @@ public class PlayerController : MonoBehaviour, IDamable
     public Action parringAction;
     [HideInInspector] public Katana katana;
 
-    public GameObject[] BloodFX;
+    public UnityAction<int, int> TransHpEvent;
 
     ITargetable preTarget;
     void FindTarget()
@@ -79,6 +88,7 @@ public class PlayerController : MonoBehaviour, IDamable
         katana = GetComponentInChildren<Katana>();
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
         animator = GetComponent<Animator>();
+        hp = maxHp;
     }
 
     public void ParryAttackGo()
@@ -90,6 +100,11 @@ public class PlayerController : MonoBehaviour, IDamable
     {
         if (Input.GetKeyDown(KeyCode.F))
             FindTarget();
+
+        if (Input.GetKeyDown(KeyCode.Z))
+            Hp -= 10;
+        if (Input.GetKeyDown(KeyCode.X))
+            Hp = maxHp;
 
         if (attackTarget != null && !attackTarget.IsTarget())
         {
@@ -112,7 +127,7 @@ public class PlayerController : MonoBehaviour, IDamable
 
     public void TakeDamage(int damage, Transform targetTransform)
     {
-        hp -= damage;
+        Hp -= damage;
 
         float angle = Mathf.Acos(Vector3.Dot(transform.forward, targetTransform.forward)) * Mathf.Rad2Deg;
 
@@ -121,13 +136,6 @@ public class PlayerController : MonoBehaviour, IDamable
         else if (0 < angle && angle <= 90f) // 0 ~ 90 µÚ
             animator.SetBool("FrontHit", false);
 
-        Debug.Log(Mathf.Acos(Vector3.Dot(transform.forward, targetTransform.forward)) * Mathf.Rad2Deg);
-        // if (damage >= 15)
-        //     animator.SetTrigger("HitDown");
-        // else if (damage >= 10)
-        //     animator.SetTrigger("HeavyHit");
-        // else if (damage >= 5)
-        //     animator.SetTrigger("Hit");
         Vector3 pos = transform.position;
         pos.y += 1f;
         string bloodTag = "Blood" + UnityEngine.Random.Range(1, 4).ToString();

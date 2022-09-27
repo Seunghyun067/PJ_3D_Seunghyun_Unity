@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] GameObject target;
+    private void Update()
     {
-        Debug.Log("AAAAAA");
+        Vector3 look = target.transform.position;
+        look.y = transform.position.y;
+        transform.LookAt(look);
     }
 
 }

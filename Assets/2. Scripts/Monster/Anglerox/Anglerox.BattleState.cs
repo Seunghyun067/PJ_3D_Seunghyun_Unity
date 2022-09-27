@@ -19,8 +19,7 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
                 moveDir.y = 0;
                 //owner.controller.Move(moveDir * Time.deltaTime * owner.moveSpeed);
                 float dist = Vector3.Distance(owner.target.transform.position, owner.transform.position);
-                Debug.Log(dist);
-                if (dist <= 6f && dist >= 5.5f)
+                if (dist <= 4.5f && dist >= 4f)
                 {
                     owner.ChangeState(AngleroxState.JUMP_ATTACK);
                     yield break;
