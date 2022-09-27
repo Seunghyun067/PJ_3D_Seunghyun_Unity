@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3245572311305185247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3245572311305185241}
+  - component: {fileID: 3245572311305185240}
+  m_Layer: 0
+  m_Name: Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3245572311305185241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245572311305185247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4231316, y: -4.830942, z: 15.784998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3245572311305185240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3245572311305185247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509275fe87420e443bb7bf02953aeb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputObjects:
+  - obj: {fileID: 1360289883098916735, guid: f9726178d59987145b84cb50a50142f3, type: 3}
+    Count: 5
+  - obj: {fileID: 5742144263580949346, guid: 5622659251633b14bbab28bb6997aff0, type: 3}
+    Count: 5
+  - obj: {fileID: 1395565506770744, guid: d5ffecf1e5c9f9c44bf7d73ac33f2d9b, type: 3}
+    Count: 5
+  - obj: {fileID: 8014432232704729477, guid: 2fbb4d3736e49fd4ebd005241028e0ae, type: 3}
+    Count: 20
+  - obj: {fileID: 2656253210798625995, guid: a78e9ef18b366424b84e0c7410d2fe72, type: 3}
+    Count: 5
+  - obj: {fileID: 5865290276592450837, guid: 42a28376f729c864a81abf66add7a418, type: 3}
+    Count: 5
+  - obj: {fileID: 4288107571095694937, guid: c3f8938673a07704e93ac52eee18f410, type: 3}
+    Count: 5
+  - obj: {fileID: 8694943018831287373, guid: 5ba523a999a483b41b46715c71e470ed, type: 3}
+    Count: 1
+  - obj: {fileID: 163362494998183278, guid: 8b75c66731a9ddf43928c9d3a4c4875d, type: 3}
+    Count: 5
