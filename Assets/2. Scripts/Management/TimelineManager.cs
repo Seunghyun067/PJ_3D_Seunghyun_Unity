@@ -25,6 +25,7 @@ public class TimelineManager : Singleton<TimelineManager>
 
     public void PlayTimeline(string str)
     {
+        
         director.playableAsset = timelines[str];
         director.Play();
     }
@@ -33,8 +34,19 @@ public class TimelineManager : Singleton<TimelineManager>
         director.playableAsset = timelines[timelineAsset.name];
         director.Play();        
     }
+
+    public void StartHold()
+    {
+        GameManager.Instance.IsKeyHold = true;
+        CameraManager.Instance.IsLock = true;
+
+    }
     public void EndPlayTimeline()
     {
         director.Stop();
+        GameManager.Instance.IsKeyHold = false;
+        CameraManager.Instance.IsLock = false;
+        Debug.Log("EndPlayTimeline");
     }
+
 }

@@ -7,7 +7,7 @@ public class SwordRobotCollider : MonoBehaviour
     SwordRobot robot;
     private void Awake()
     {
-        robot = GetComponentInParent<SwordRobot>();
+        robot = GetComponentInParent<SwordRobot>();        
     }
     private void OnTriggerEnter(Collider other)
     {

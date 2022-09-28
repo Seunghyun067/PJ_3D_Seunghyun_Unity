@@ -22,7 +22,7 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
 
     protected StateMachine<T1, T2> stateMachine;
     protected FindTargetOfOverlapSphere findTarget;
-    protected bool isDead = false;
+    public bool isDead { get; set; } = false;
     protected PlayerController player;
 
     protected IEnumerator DissolveEnable(float timeScale = 1f)

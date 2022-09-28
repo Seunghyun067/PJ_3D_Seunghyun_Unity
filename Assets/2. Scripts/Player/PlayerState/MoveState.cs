@@ -16,6 +16,9 @@ public class MoveState : PlayerStateBase
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (GameManager.Instance.IsKeyHold)
+            return;
+
         Vector3 moveInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
         animator.SetFloat("MoveSpeed", moveInput.magnitude);
                 

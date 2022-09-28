@@ -19,16 +19,18 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         {
             while (true)
             {
-                Vector3 moveDir = (owner.target.transform.position - owner.transform.position).normalized;
-                moveDir.y = 0;
-                owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(moveDir), owner.rotSpeed * Time.deltaTime);
-                owner.controller.Move(moveDir * Time.deltaTime * owner.moveSpeed);
-
                 if (Vector3.Distance(owner.target.transform.position, owner.transform.position) <= 1.25f)
                 {
                     owner.ChangeState(SwordRobotState.ATTACK);
                     yield break;
                 }
+
+                Vector3 moveDir = (owner.target.transform.position - owner.transform.position).normalized;
+                moveDir.y = 0;
+                owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(moveDir), owner.rotSpeed * Time.deltaTime);
+                owner.controller.Move(moveDir * Time.deltaTime * owner.moveSpeed);
+
+                
 
                 yield return null;
             }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum SwordRobotState { IDLE, TRACE, ATTACK, HIT, DIE, NONE_STATE }
 
@@ -8,7 +9,6 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
 {
     // Start is called before the first frame update
     [SerializeField] private Collider attackCollider;
-
     public void AttackColliderActive(bool isActive)
     {
         attackCollider.enabled = isActive;

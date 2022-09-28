@@ -35,6 +35,7 @@ public class ToolTip : MonoBehaviour
 
     IEnumerator DisableCo()
     {
+        text.text = "";
         while (img.fillAmount > 0f)
         {
             img.fillAmount -= Time.unscaledDeltaTime * speed;
@@ -43,7 +44,10 @@ public class ToolTip : MonoBehaviour
         Time.timeScale = 1f;
         gameObject.SetActive(false);
     }
-
+    public void SetText(string str)
+    {
+        text.text = str;
+    }
     
     private void OnEnable()
     {

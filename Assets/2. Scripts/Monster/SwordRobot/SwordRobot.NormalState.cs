@@ -27,7 +27,6 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         }
         public override void OnStateExit(SwordRobot owner)
         {
-
         }        
     }
 

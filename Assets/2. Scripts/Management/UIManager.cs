@@ -13,8 +13,8 @@ public class UIManager : Singleton<UIManager>
 
     public void TooltipOn(string str)
     {
-
+        Debug.Log("ToolTip ON");
         tooltip.gameObject.SetActive(true);
-
+        tooltip.SetText(str);
     }
 }

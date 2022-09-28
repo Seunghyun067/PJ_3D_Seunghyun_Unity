@@ -10,6 +10,23 @@ public class CameraManager : Singleton<CameraManager>
 
     private Coroutine shakeCoroutine;
 
+    private bool isLock = false;
+    public bool IsLock
+    {
+        get { return isLock; }
+
+        set
+        {
+            isLock = value;
+            mainCM.enabled = !isLock;
+        }
+    }
+
+    public void MainCMLock(bool isLock)
+    {
+        mainCM.enabled = isLock;
+    }
+
 
     void Awake()
     {

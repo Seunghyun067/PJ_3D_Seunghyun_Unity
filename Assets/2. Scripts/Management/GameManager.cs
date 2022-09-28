@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     // Start is called before the first frame update
+    public bool IsKeyHold { get; set; } = false;
 
     public void TimeSleep(float scale, float time)
     {

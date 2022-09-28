@@ -52,9 +52,14 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         StartCoroutine(DissolveDisable(0.3f));
 
     }
-
+    private bool isFirst = true;
     private void OnEnable()
     {
+        if(isFirst)
+        {
+            isFirst = false;
+            return;
+        }
         StartCoroutine(DissolveEnable());
         stateMachine.ChangeState(RifleRobotState.IDLE);
         curHp = maxHP;

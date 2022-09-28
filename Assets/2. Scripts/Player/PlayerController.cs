@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour, IDamable
         animator.SetTrigger("ParryAttack");
     }
     [SerializeField] private Transform bossCo;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
