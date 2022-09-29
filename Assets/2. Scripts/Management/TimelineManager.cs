@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using Cinemachine;
 
 [RequireComponent(typeof(PlayableDirector))]
@@ -14,6 +16,8 @@ public class TimelineManager : Singleton<TimelineManager>
     Dictionary<string, TimelineAsset> timelines = new Dictionary<string, TimelineAsset>();
 
     private PlayableDirector director;
+
+    VolumeProfile vp;
 
     private void Awake()
     {
@@ -39,6 +43,7 @@ public class TimelineManager : Singleton<TimelineManager>
     {
         GameManager.Instance.IsKeyHold = true;
         CameraManager.Instance.IsLock = true;
+        StartCoroutine(VolumeManager.Instance.VigStart(0.3f));
 
     }
     public void EndPlayTimeline()
@@ -46,7 +51,14 @@ public class TimelineManager : Singleton<TimelineManager>
         director.Stop();
         GameManager.Instance.IsKeyHold = false;
         CameraManager.Instance.IsLock = false;
+        StartCoroutine(VolumeManager.Instance.VigEnd());
         Debug.Log("EndPlayTimeline");
+    }
+
+    public void NextScene(string nextSceneName)
+    {
+        LoadingSceneManager.LoadScene(nextSceneName);
+
     }
 
 }
