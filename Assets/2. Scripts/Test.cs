@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Test : MonoBehaviour
 {
-    [SerializeField] GameObject target;
-    private void Update()
+    public void NextScene()
     {
-        Vector3 look = target.transform.position;
-        look.y = transform.position.y;
-        transform.LookAt(look);
+        LoadingSceneManager.LoadScene("City");
     }
 
 }
