@@ -52,6 +52,7 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
         for (int i = 0; i < myRenderer.Length; ++i)
             myRenderer[i].material.SetFloat("_Dissolve", 1f);
         ObjectPooling.Instance.PushObject(this.gameObject);
+        MonsterManager.Instance.activeMonsters.Remove(this.gameObject);
         yield return null;
     }
 

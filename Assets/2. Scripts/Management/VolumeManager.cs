@@ -8,6 +8,13 @@ public class VolumeManager : Singleton<VolumeManager>
 {
     private Volume v;
     private VolumeProfile vp;
+    private float curVigValue = 0f;
+
+    private void Start()
+    {
+        SetVolume();
+        
+    }
 
     public T GetShared<T>() where T : VolumeComponent
     {
@@ -20,7 +27,10 @@ public class VolumeManager : Singleton<VolumeManager>
     public void SetVolume()
     {
         v = FindObjectOfType<Volume>();
-        vp = v.profile;        
+        vp = v.profile;
+        Vignette vig = GetShared<Vignette>();
+        curVigValue = vig.intensity.value;
+        Debug.Log(curVigValue);
     }
 
     public IEnumerator VigStart(float dstIntensity)
@@ -41,12 +51,12 @@ public class VolumeManager : Singleton<VolumeManager>
         if (!v) SetVolume();
         Vignette vig = GetShared<Vignette>();
 
-        while (vig.intensity.value > 0f)
+        while (vig.intensity.value > curVigValue)
         {
-            vig.intensity.value -= Time.deltaTime;
+            vig.intensity.value -= Time.deltaTime * 0.5f;
             yield return null;
         }
-        vig.intensity.value = 0f;
+        vig.intensity.value = curVigValue;
     }
 
     public void Vig()
@@ -59,8 +69,37 @@ public class VolumeManager : Singleton<VolumeManager>
         }
     }
 
+    public IEnumerator ChromaticStart(float dstIntensity, float spd)
+    {
+        if (!v) SetVolume();
+        ChromaticAberration ch = GetShared<ChromaticAberration>();
+        ch.intensity.max = dstIntensity;
+        ch.intensity.value = 0f;
 
 
-    
-   
+        while (ch.intensity.value < dstIntensity)
+        {
+            ch.intensity.value += Time.deltaTime * spd;
+            yield return null;
+        }
+        ch.intensity.value = dstIntensity;
+    }
+
+    public IEnumerator ChromaticEnd(float spd)
+    {
+        if (!v) SetVolume();
+        ChromaticAberration ch = GetShared<ChromaticAberration>();
+
+        while (ch.intensity.value > 0f)
+        {
+            ch.intensity.value -= Time.deltaTime * 10f;
+            yield return null;
+        }
+        ch.intensity.value = 0f;
+    }
+
+
+
+
+
 }

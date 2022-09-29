@@ -19,6 +19,16 @@ public class TimelineManager : Singleton<TimelineManager>
 
     VolumeProfile vp;
 
+    private struct SaveData
+    {
+        public string saveTimeline;
+        public double saveTime; 
+    }
+
+    private SaveData saveData = new SaveData();
+
+
+
     private void Awake()
     {
         director = GetComponent<PlayableDirector>();
@@ -39,6 +49,12 @@ public class TimelineManager : Singleton<TimelineManager>
         director.Play();        
     }
 
+    public void PlayTime(TimelineAsset timelineAsset)
+    {
+        director.playableAsset = timelines[timelineAsset.name];
+        director.Play();
+    }
+
     public void StartHold()
     {
         GameManager.Instance.IsKeyHold = true;
@@ -55,9 +71,43 @@ public class TimelineManager : Singleton<TimelineManager>
         Debug.Log("EndPlayTimeline");
     }
 
+    public void EndPlayTimelineTopView()
+    {
+        director.Stop();
+        GameManager.Instance.IsKeyHold = false;
+        StartCoroutine(VolumeManager.Instance.VigEnd());
+        Debug.Log("EndPlayTimeline");
+    }
+
+    public void SavePoint()
+    {
+        saveData.saveTime = director.time;
+        saveData.saveTimeline = director.playableAsset.name;
+        Debug.Log(saveData.saveTime + "  " + saveData.saveTimeline);
+    }
+
+    public void ReturnSavePoint()
+    {
+        PlayTimeline(saveData.saveTimeline);
+        director.time = saveData.saveTime;
+        StartHold();
+    }
+
     public void NextScene(string nextSceneName)
     {
         LoadingSceneManager.LoadScene(nextSceneName);
+
+    }
+    [SerializeField] private float chr = 5f;
+    [SerializeField] private float spd = 1f;
+    public void ChromaticStart()
+    {
+        StartCoroutine(VolumeManager.Instance.ChromaticStart(chr, spd));
+
+    }
+    public void ChromaticEnd()
+    {
+        StartCoroutine(VolumeManager.Instance.ChromaticEnd(spd));
 
     }
 

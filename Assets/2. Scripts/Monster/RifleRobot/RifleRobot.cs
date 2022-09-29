@@ -67,11 +67,11 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
 
     public override void TakeDamage(int damage, Transform transform)
     {
-        if (maxHP <= 0)
+        if (curHp <= 0)
             return;
 
-        maxHP -= damage;
-        if (maxHP > 0)
+        curHp -= damage;
+        if (curHp > 0)
         {
             ChangeState(RifleRobotState.HIT);
             animator.SetTrigger("Hit");
