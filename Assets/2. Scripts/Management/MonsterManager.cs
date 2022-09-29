@@ -9,20 +9,10 @@ public class MonsterManager : Singleton<MonsterManager>
 
     [SerializeField] GameObject[] swordMonsterPos;
     [SerializeField] GameObject[] rifleMonsterPos;
+    [SerializeField] GameObject[] angPos;
 
     List<SwordRobot> swordMonsters = new List<SwordRobot>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+  
     IEnumerator SwordRobotDeadEvent()
     {
         bool isAllDead = false;
@@ -60,9 +50,16 @@ public class MonsterManager : Singleton<MonsterManager>
 
 
 
+
     public void CreateRifleMonster()
     {
         foreach (var pos in rifleMonsterPos)
+            ObjectPooling.Instance.PopObject("RifleRobot", pos.transform.position);
+    }
+
+    public void CreateAngPos()
+    {
+        foreach (var pos in angPos)
             ObjectPooling.Instance.PopObject("RifleRobot", pos.transform.position);
     }
 }

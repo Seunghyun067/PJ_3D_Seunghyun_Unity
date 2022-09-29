@@ -27,9 +27,18 @@ public class CameraManager : Singleton<CameraManager>
         mainCM.enabled = isLock;
     }
 
+    public void SetMainCM()
+    {
+        mainCM = FindObjectOfType<CinemachineFreeLook>();
+    }
 
     void Awake()
     {
+        if(mainCM == null)
+        {
+            mainCM = FindObjectOfType<CinemachineFreeLook>();
+        }
+        
         cameraNoise = mainCM.GetRig(1).GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
     }
 
