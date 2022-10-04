@@ -40,6 +40,7 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
 
     private void OnEnable()
     {
+        StopAllCoroutines();
         StartCoroutine(DissolveEnable());
         stateMachine.ChangeState(SwordRobotState.IDLE);
         isDead = false;

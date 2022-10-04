@@ -77,6 +77,7 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
     {
         ObjectPooling.Instance.PushObject(this.gameObject);
         MonsterManager.Instance.activeMonsters.Remove(this.gameObject);
+        StopAllCoroutines();
     }
 
     public void ChangeState(T1 nextState)

@@ -23,7 +23,7 @@ public class UIManager : Singleton<UIManager>
 
     }
 
-    private void Awake()
+    private void Start()
     {
         tooltip?.gameObject.SetActive(false);
         deadUI.SetActive(false);

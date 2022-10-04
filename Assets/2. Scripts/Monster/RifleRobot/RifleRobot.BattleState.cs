@@ -83,7 +83,13 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
                     owner.SoundPlay((int)AudioTag.LASER);
                     yield return new WaitForSeconds(0.3f);
                 }
-
+                if (!owner.target)
+                {
+                    owner.ChangeState(RifleRobotState.IDLE);
+                    owner.animator.SetBool("Attack", false);
+                    owner.animator.SetFloat("MoveWeight", owner.moveWeight = 0f);
+                    yield break;
+                }
                 curChargingTime += Time.deltaTime;
 
                 float dist = Vector3.Distance(owner.target.transform.position, owner.transform.position);
