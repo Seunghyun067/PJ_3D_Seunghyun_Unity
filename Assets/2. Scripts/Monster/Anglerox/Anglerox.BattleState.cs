@@ -9,11 +9,21 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
         public override void OnStateEnter(Anglerox owner)
         {
             owner.animator.SetBool("Trace", true);
+            owner.animator.applyRootMotion = true;
         }
         public override IEnumerator OnStateUpdate(Anglerox owner)
         {
             while (true)
             {
+                if (!owner.target)
+                {
+                    owner.animator.SetBool("Trace", false);
+                    owner.animator.SetBool("AttackWalk", false);
+                    owner.ChangeState(AngleroxState.IDLE);
+                    
+                    yield break;
+                }
+
                 Vector3 moveDir = (owner.target.transform.position - owner.transform.position).normalized;
                 owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(moveDir), owner.rotSpeed * Time.deltaTime);
                 moveDir.y = 0;
@@ -57,8 +67,18 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
         {
             float attackTime = 1f;
 
+           
+
             while (attackTime > 0f)
             {
+                if (!owner.target)
+                {
+                    owner.animator.SetBool("Trace", false);
+                    owner.animator.SetBool("AttackWalk", false);
+                    owner.ChangeState(AngleroxState.IDLE);
+
+                    yield break;
+                }
                 Vector3 moveDir = (owner.target.transform.position - owner.transform.position).normalized;
 
                 Vector3 dirToTarget = (owner.target.transform.position - owner.transform.position);
@@ -99,6 +119,46 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
         }
     }
 
+    private class RunAway : BaseState
+    {
+        public override void OnStateEnter(Anglerox owner)
+        {
+        }
+        public override IEnumerator OnStateUpdate(Anglerox owner)
+        {
+            float runAwayTime = 2f;
+
+            while (runAwayTime > 0f)
+            {
+                runAwayTime -= Time.deltaTime;
+                Vector3 moveDir = (owner.target.transform.position - owner.transform.position).normalized;
+                owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(-moveDir), owner.rotSpeed * Time.deltaTime);
+                yield return null;
+            }
+            owner.DeadEffect();
+        }
+        public override void OnStateExit(Anglerox owner)
+        {
+
+        }
+    }
+
+    private class Roar : BaseState
+    {
+        public override void OnStateEnter(Anglerox owner)
+        {
+        }
+        public override IEnumerator OnStateUpdate(Anglerox owner)
+        {
+            yield return new WaitForSeconds(1f);
+            owner.ChangeState(AngleroxState.RUN_AWAY);
+        }
+        public override void OnStateExit(Anglerox owner)
+        {
+
+        }
+    }
+
     private class JumpAttackState : BaseState
     {
         public override void OnStateEnter(Anglerox owner)
@@ -112,6 +172,15 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
 
             while (attackTime > 0f)
             {
+                if (!owner.target)
+                {
+                    owner.animator.SetBool("Trace", false);
+                    owner.animator.SetBool("AttackWalk", false);
+                    owner.ChangeState(AngleroxState.IDLE);
+
+                    yield break;
+                }
+
                 Vector3 moveDir = (owner.target.transform.position - owner.transform.position).normalized;
                 owner.transform.localRotation = Quaternion.Slerp(owner.transform.localRotation, Quaternion.LookRotation(moveDir), owner.rotSpeed * Time.deltaTime);
                 attackTime -= Time.deltaTime;

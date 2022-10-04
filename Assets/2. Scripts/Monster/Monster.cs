@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(FindTargetOfOverlapSphere))]
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 
 public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  where T2 : MonoBehaviour
 {
@@ -24,6 +25,16 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
     protected FindTargetOfOverlapSphere findTarget;
     public bool isDead { get; set; } = false;
     protected PlayerController player;
+    protected bool isTargetDead = false;
+
+    [SerializeField] protected AudioClip[] audios;
+    protected AudioSource audioSource;
+
+    public void SoundPlay(int tag)
+    {
+        audioSource.clip = audios[tag];
+        audioSource.Play();
+    }
 
     protected IEnumerator DissolveEnable(float timeScale = 1f)
     {
@@ -41,6 +52,7 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
     }
     protected IEnumerator DissolveDisable(float timeScale = 1f)
     {
+        //Invoke("DeadObject", 2f);
         float dissolveValue = 0f;
 
         while (dissolveValue < 1f)
@@ -56,6 +68,17 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
         yield return null;
     }
 
+    public void DissolveDisableStart()
+    {
+        StartCoroutine(DissolveDisable());
+    }
+
+    public void DeadObject()
+    {
+        ObjectPooling.Instance.PushObject(this.gameObject);
+        MonsterManager.Instance.activeMonsters.Remove(this.gameObject);
+    }
+
     public void ChangeState(T1 nextState)
     {
         stateMachine.ChangeState(nextState);
@@ -63,6 +86,9 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
 
     protected void FindTarget()
     {
+        if (isTargetDead)
+            return;
+
         Collider[] colls = null;
 
         if (!findTarget.FindTarget(ref colls))
@@ -121,8 +147,20 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         player = FindObjectOfType<PlayerController>();
+        audioSource = GetComponent<AudioSource>();
 
         myRenderer = GetComponentsInChildren<Renderer>();
+        player.deadEvent += () =>
+        {
+            isTargetDead = true;
+            target = null;
+        };
+
+        player.deadReturnEvent += () =>
+        {
+            isTargetDead = false;
+            target = player;
+        };
     }
 
     public bool IsTarget()

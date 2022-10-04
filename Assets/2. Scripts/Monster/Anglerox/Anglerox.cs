@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AngleroxState { IDLE, ATTACK, HIT, DIE, TRACE, JUMP_ATTACK }
+public enum AngleroxState { IDLE, ATTACK, HIT, DIE, TRACE, JUMP_ATTACK, RUN_AWAY, ROAR }
 
 public partial class Anglerox : Monster<AngleroxState, Anglerox>
 {
     Dictionary<string, AngleroxColliderEvent> colliders = new Dictionary<string, AngleroxColliderEvent>();
+    bool isRunAway = false;
+
+    public enum AudioTag { HIT, DEAD, ROAR}
 
     private void Awake()
     {
@@ -36,6 +39,7 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
         stateMachine.ChangeState(AngleroxState.IDLE);
         isDead = false;
         curHp = maxHP;
+        isRunAway = false;
     }
 
     public void AttackColliderEvent(Collider other, Collider thisCollider)
@@ -44,7 +48,7 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
             return;
 
         other.gameObject.GetComponent<IDamable>().TakeDamage(5, transform);
-        target.HitTrigger("Hit");
+        target?.HitTrigger("Hit");
     }
 
     public void StrongAttackColliderEvent(Collider other, Collider thisCollider)
@@ -53,7 +57,7 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
             return;
 
         other.gameObject.GetComponent<IDamable>().TakeDamage(5, transform);
-        target.HitTrigger("HitDown");
+        target?.HitTrigger("HitDown");
     }
 
     public void BodyColliderEvent(Collider other, Collider thisCollider)
@@ -62,6 +66,8 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
     }
     public override void TakeDamage(int damage, Transform transform = null)
     {
+        if (isRunAway)
+            return;
         if (curHp <= 0)
             return;
 
@@ -72,6 +78,7 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
         {
             ChangeState(AngleroxState.HIT);
             animator.SetTrigger("Hit");
+            SoundPlay((int)AudioTag.HIT);
         }
         else
         {
@@ -80,9 +87,21 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
             targetedObject?.SetActive(false);
             isDead = true;
             ChangeState(AngleroxState.DIE);
+            SoundPlay((int)AudioTag.DEAD);
         }
-
     }
+
+    public void RunAwayStart()
+    {
+        if (isDead)
+            return;
+        StopAllCoroutines();
+        animator.SetTrigger("RunAway");
+        ChangeState(AngleroxState.ROAR);
+        SoundPlay((int)AudioTag.ROAR);
+        isRunAway = true;
+    }
+
     public override void HitEffect(Vector3 position, Quaternion rotaiton)
     {
         string bloodTag = "Blood" + UnityEngine.Random.Range(1, 4).ToString();
@@ -98,6 +117,8 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
         stateMachine.AddState(AngleroxState.ATTACK, new AttackState());
         stateMachine.AddState(AngleroxState.DIE, new DieState());
         stateMachine.AddState(AngleroxState.JUMP_ATTACK, new JumpAttackState());
+        stateMachine.AddState(AngleroxState.RUN_AWAY, new RunAway());
+        stateMachine.AddState(AngleroxState.ROAR, new Roar());
     }
 
     public void AttackStart(string collName)

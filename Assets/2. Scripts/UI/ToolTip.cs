@@ -29,7 +29,7 @@ public class ToolTip : MonoBehaviour
 
     private void Update()
     {
-        if (isClouseImp && Input.GetKeyDown(KeyCode.B))
+        if (isClouseImp && Input.GetMouseButtonDown(0))
             StartCoroutine(DisableCo());
     }
 

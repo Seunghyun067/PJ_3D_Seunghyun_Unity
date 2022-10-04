@@ -28,7 +28,7 @@ public class KatanaParryingCollider : MonoBehaviour
         if (other.gameObject.layer != LayerMask.NameToLayer("Parrying"))
             return;
 
-
+        player.SoundPlay(PlayerController.AudioTag.FARRY);
         Instantiate(Effect, transform.position, Quaternion.identity);
         GameManager.Instance.TimeSleep(0.1f, 0.5f);
         player.parringAction?.Invoke();

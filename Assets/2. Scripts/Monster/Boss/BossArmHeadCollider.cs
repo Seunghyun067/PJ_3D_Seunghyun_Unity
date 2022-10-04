@@ -7,11 +7,22 @@ public class BossArmHeadCollider : MonoBehaviour, ITargetable, IDamable
 {
     [SerializeField] protected GameObject targetedObject = null;
 
+    private Boss boss;
     public UnityAction<BossArmHeadCollider> deadEvent;
     Renderer[] myRenderer;
     Collider[] myColliders;
     private int hp = 20;
     private bool isDead;
+
+    public void Set()
+    {
+        isDead = false;
+        hp = 20;
+
+        foreach (var renderer in myRenderer)
+            renderer.material.SetFloat("_Dissolve", 0f);
+        gameObject.SetActive(true);
+    }
 
     public void CollidersTriggerOn(bool isTrigger)
     {
@@ -19,21 +30,6 @@ public class BossArmHeadCollider : MonoBehaviour, ITargetable, IDamable
             coll.isTrigger = isTrigger;
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.layer != LayerMask.NameToLayer("Sword"))
-    //        return;
-    //
-    //    string bloodTag = "Blood" + UnityEngine.Random.Range(1, 4).ToString();
-    //    
-    //    ObjectPooling.Instance.PopObject(bloodTag, other.bounds.center);
-    //
-    //
-    //
-    //    StartCoroutine(De());
-    //    Debug.Log("트리거 엔터");
-    //
-    //}
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer != LayerMask.NameToLayer("Player"))
@@ -53,10 +49,12 @@ public class BossArmHeadCollider : MonoBehaviour, ITargetable, IDamable
             renderer.material.SetFloat("_NoiseScale", 585f);
         targetedObject.transform.SetParent(gameObject.transform);
         targetedObject.SetActive(false);
+        boss = transform.GetComponentInParent<Boss>();
     }
 
     IEnumerator De(int index = 0)
     {
+        
         float dissolveValue = 0f;
         bool isNext = true;
 
@@ -106,8 +104,10 @@ public class BossArmHeadCollider : MonoBehaviour, ITargetable, IDamable
     public void TakeDamage(int damage, Transform transform = null)
     {
         hp -= damage;
+        boss.GetComponent<Boss>().SoundPlay(Boss.AudioTag.HIT);
         if (hp > 0)
             return;
+        boss.GetComponent<Boss>().SoundPlay(Boss.AudioTag.ARM_DIE);
         targetedObject?.SetActive(false);
         isDead = true;
         StartCoroutine(De());

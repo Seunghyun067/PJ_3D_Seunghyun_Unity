@@ -6,6 +6,7 @@ public enum RifleRobotState { IDLE, TRACE, ATTACK, HIT, DIE, NONE_STATE }
 
 public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
 {
+    public enum AudioTag { CHARGING, DIE, LASER }
     // Start is called before the first frame update
     [SerializeField] private Collider attackCollider;
     [SerializeField] private Transform shootPosition;
@@ -75,9 +76,11 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         {
             ChangeState(RifleRobotState.HIT);
             animator.SetTrigger("Hit");
+            
         }
         else
         {
+            SoundPlay((int)AudioTag.DIE);
             StopAllCoroutines();
             animator.SetTrigger("Dead");
             targetedObject?.SetActive(false);

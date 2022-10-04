@@ -14,6 +14,8 @@ public class BossNonAttackState : BossBaseState
 }
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (!boss.isStart)
+            return;
         float dist = Vector3.Distance(boss.target.transform.position, boss.transform.position);
 
         if (dist >= 15f)
@@ -22,18 +24,21 @@ public class BossNonAttackState : BossBaseState
         if (dist <= 11f)
         {
             animator.SetTrigger("NearAttack");
+            boss.SoundPlay(Boss.AudioTag.NEAR);
         }
 
         curDelayTime -= Time.deltaTime;
         if (curDelayTime < 0f)
         {
-            if (curAttackCount == 2)
+            if (curAttackCount == 3)
             {
+                boss.SoundPlay(Boss.AudioTag.ROAR);
                 animator.SetTrigger("Hit");
                 curAttackCount = 0;
                 curDelayTime = attackDelayTime;
                 return;
             }
+            boss.SoundPlay(Boss.AudioTag.NORMAL);
             animator.SetTrigger("Attack");
             curDelayTime = attackDelayTime;
             curAttackCount++;

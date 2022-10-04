@@ -15,6 +15,13 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         {
             while (true)
             {
+                if (!owner.target)
+                {
+                    owner.ChangeState(RifleRobotState.IDLE);
+                    owner.animator.SetBool("Attack", false);
+                    owner.animator.SetFloat("MoveWeight", owner.moveWeight = 0f);
+                    yield break;
+                }
 
                 if (Vector3.Distance(owner.target.transform.position, owner.transform.position) <= 10f)
                 {
@@ -49,13 +56,23 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
             float curChargingTime = 0f;
             float chargingTime = 1.5f;
             bool isCharging = false;
+
+            
             while (true)
-            {                
+            {
+                if (!owner.target)
+                {
+                    owner.ChangeState(RifleRobotState.IDLE);
+                    owner.animator.SetBool("Attack", false);
+                    owner.animator.SetFloat("MoveWeight", owner.moveWeight = 0f);
+                    yield break;
+                }
                 if (!isCharging)
                 {
                     owner.chargingEffect = ObjectPooling.Instance.PopObject("ChargeParticles");
                     owner.chargingEffect.transform.position = owner.shootPosition.position;
                     isCharging = true;
+                    owner.SoundPlay((int)AudioTag.CHARGING);
                 }
 
                 if (curChargingTime > chargingTime)
@@ -63,6 +80,8 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
                     isCharging = false;
                     owner.ShootLaser();
                     curChargingTime = 0f;
+                    owner.SoundPlay((int)AudioTag.LASER);
+                    yield return new WaitForSeconds(0.3f);
                 }
 
                 curChargingTime += Time.deltaTime;

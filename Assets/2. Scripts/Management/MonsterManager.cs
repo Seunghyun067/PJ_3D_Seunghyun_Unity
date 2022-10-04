@@ -30,7 +30,6 @@ public class MonsterManager : Singleton<MonsterManager>
         
         while (true)
         {            
-            Debug.Log(activeMonsters.Count);
             foreach (var monster in activeMonsters)
             {                
                 if (!monster.activeSelf)
@@ -56,8 +55,12 @@ public class MonsterManager : Singleton<MonsterManager>
         }       
     }
 
-   
+    public void StopCoroutine()
+    {
+        StopAllCoroutines();
+    }
 
+    Coroutine swordCo;
     public void CreateSwordMonster()
     {
         foreach (var pos in swordMonsterPos)
@@ -65,7 +68,7 @@ public class MonsterManager : Singleton<MonsterManager>
             GameObject obj = ObjectPooling.Instance.PopObject("SwordRobot", pos.transform.position);
             activeMonsters.Add(obj);
         }
-        StartCoroutine(SwordRobotDeadEvent());
+        swordCo = StartCoroutine(SwordRobotDeadEvent());
     }
 
 

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class PlayerController : MonoBehaviour, IDamable
 {
     private int comboAttackCount { get; set; } = 0;
@@ -17,6 +19,17 @@ public class PlayerController : MonoBehaviour, IDamable
     [SerializeField] public float rotSpeed { get; } = 5;
     [SerializeField] public int attackDamage { get; } = 5;
     [SerializeField] private int maxHp = 100;
+
+    [SerializeField] private AudioClip[] audios;
+    private AudioSource audioSource;
+
+    public enum AudioTag { DEAD, HIT, FARRY, SWORD }
+
+    public void SoundPlay(AudioTag tag)
+    {
+        audioSource.clip = audios[(int)tag];
+        audioSource.Play();
+    }
 
     private int hp = 10;
     public int Hp
@@ -36,6 +49,21 @@ public class PlayerController : MonoBehaviour, IDamable
     private Coroutine distorCo;
     private Animator animator;
 
+    public UnityAction deadEvent;
+    public UnityAction deadReturnEvent;
+
+    private bool isDead = false;
+    public bool IsDead
+    {
+        get => isDead;
+        set 
+        { 
+            isDead = value;
+            if (value)
+                deadEvent?.Invoke();
+        }
+    }
+
 
     public Action parringAction;
     [HideInInspector] public Katana katana;
@@ -43,6 +71,14 @@ public class PlayerController : MonoBehaviour, IDamable
     public UnityAction<int, int> TransHpEvent;
 
     ITargetable preTarget;
+
+    public void DeadReturn()
+    {
+        animator.SetBool("Dead", isDead = false);
+        deadReturnEvent?.Invoke();
+        Hp = maxHp;
+    }
+
     void FindTarget()
     {
         Collider[] colls = findTarget.FindTarget();
@@ -88,6 +124,7 @@ public class PlayerController : MonoBehaviour, IDamable
         katana = GetComponentInChildren<Katana>();
         findTarget = GetComponent<FindTargetOfOverlapSphere>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         hp = maxHp;
     }
 
@@ -101,17 +138,21 @@ public class PlayerController : MonoBehaviour, IDamable
     {
         if (Input.GetKeyDown(KeyCode.F))
             FindTarget();
-
-        if (Input.GetKeyDown(KeyCode.Z))
-            Hp -= 10;
-        if (Input.GetKeyDown(KeyCode.X))
-            Hp = maxHp;
-
         if (attackTarget != null && !attackTarget.IsTarget())
         {
             preTarget?.NonTarget();
             attackTarget = preTarget = null;
             targetTransform = null;
+        }
+
+        Collider[] colls = findTarget.FindTarget();
+
+        if (0 == colls.Length)
+        {
+            preTarget?.NonTarget();
+            attackTarget = preTarget = null;
+            targetTransform = null;
+            return;
         }
     }
 
@@ -123,13 +164,27 @@ public class PlayerController : MonoBehaviour, IDamable
 
     public void HitTrigger(string triggerTag)
     {
+        if (IsDead)
+            return;
         animator.SetTrigger(triggerTag);
     }
 
     public void TakeDamage(int damage, Transform targetTransform)
     {
+        if (IsDead)
+            return;
+
         Hp -= damage;
 
+        SoundPlay(AudioTag.HIT);
+        
+
+        if (Hp <= 0)
+        {
+
+            animator.SetBool("Dead", IsDead = true);
+            SoundPlay(AudioTag.DEAD);
+        }
         float angle = Mathf.Acos(Vector3.Dot(transform.forward, targetTransform.forward)) * Mathf.Rad2Deg;
 
         if (90f < angle && angle <= 180f) // 90 ~ 180 ¾Õ
@@ -145,6 +200,15 @@ public class PlayerController : MonoBehaviour, IDamable
         katana.AttackColliderActive(false);
         katana.ParryingColliderActive(false);
         animator.ResetTrigger("ParryAttack");
+
+       
+
+    }
+
+    public void PlayerKill()
+    {
+        Hp = 0;
+        animator.SetBool("Dead", IsDead = true);
     }
 
     public void HitEffect(Vector3 position, Quaternion rotation)

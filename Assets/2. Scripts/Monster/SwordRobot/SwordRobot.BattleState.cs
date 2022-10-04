@@ -19,6 +19,13 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         {
             while (true)
             {
+                if (!owner.target)
+                {
+                    owner.animator.SetBool("Trace", false);
+                    owner.ChangeState(SwordRobotState.IDLE);
+                    yield break;
+                }
+
                 if (Vector3.Distance(owner.target.transform.position, owner.transform.position) <= 1.25f)
                 {
                     owner.ChangeState(SwordRobotState.ATTACK);

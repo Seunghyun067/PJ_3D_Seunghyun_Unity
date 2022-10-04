@@ -20,8 +20,8 @@ public class ObjectPooling : Singleton<ObjectPooling>
         {
             if (objectPool.ContainsKey(inputObj.obj.name))
             {
-                Debug.LogError("오브젝트 풀에 다른 오브젝트의 중복된 이름이 들어있음");
-                UnityEditor.EditorApplication.isPlaying = false;
+                //Debug.LogError("오브젝트 풀에 다른 오브젝트의 중복된 이름이 들어있음");
+                //UnityEditor.EditorApplication.isPlaying = false;
                 return;
             }
 

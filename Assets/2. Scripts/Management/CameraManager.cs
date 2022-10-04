@@ -6,6 +6,7 @@ using Cinemachine;
 public class CameraManager : Singleton<CameraManager>
 {
     [SerializeField] private CinemachineFreeLook mainCM;
+    [SerializeField] private CinemachineFreeLook topCM;
     private CinemachineBasicMultiChannelPerlin cameraNoise;
 
     private Coroutine shakeCoroutine;
@@ -32,6 +33,11 @@ public class CameraManager : Singleton<CameraManager>
         mainCM = FindObjectOfType<CinemachineFreeLook>();
     }
 
+    public void MainCMChange()
+    {
+        mainCM = topCM;
+    }
+
     void Awake()
     {
         if(mainCM == null)
@@ -51,10 +57,6 @@ public class CameraManager : Singleton<CameraManager>
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            CameraShaking(1f, 1f);
-        }
     }
 
     IEnumerator CameraShakeCo(float duration, float amplitude, float frequency = 1f)

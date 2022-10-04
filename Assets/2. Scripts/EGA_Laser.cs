@@ -122,6 +122,7 @@ public class EGA_Laser : MonoBehaviour
                     EGA_Laser laser = obj.GetComponent<EGA_Laser>();
                     laser.SetLayerMask(~(1 << LayerMask.NameToLayer("Sword")));
                     laser.LaserShoot(owner.position);
+                    
                 }
                 if (!isHit && hit.transform.gameObject.layer == LayerMask.NameToLayer("Monster"))
                 {

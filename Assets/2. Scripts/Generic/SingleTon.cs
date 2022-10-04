@@ -5,6 +5,7 @@ using UnityEngine;
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T instance;
+    [SerializeField] private bool isDestory = false;
 
     public static T Instance
     {
@@ -26,6 +27,8 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     private void Awake()
     {
+        if (isDestory) return;
+
         if (transform.parent != null && transform.root != null)
             DontDestroyOnLoad(this.transform.root.gameObject);
         else

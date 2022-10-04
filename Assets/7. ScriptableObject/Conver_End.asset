@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bfa4ff060f4b6459c6fa07f324f240, type: 3}
+  m_Name: Conver_End
+  m_EditorClassIdentifier: 
+  conversation:
+  - name: G2
+    talk: "\uCC98\uCE58 \uC644\uB8CC."
+  - name: "\uBCF8\uBD80"
+    talk: "\uC218\uACE0\uD588\uB2E4."
+  - name: "\uBCF8\uBD80"
+    talk: "\uB2E4\uC74C \uC784\uBB34\uAE4C\uC9C0 \uB300\uAE30\uD558\uB3C4\uB85D"

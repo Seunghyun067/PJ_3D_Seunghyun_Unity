@@ -22,7 +22,8 @@ public class TimelineManager : Singleton<TimelineManager>
     private struct SaveData
     {
         public string saveTimeline;
-        public double saveTime; 
+        public double saveTime;
+        public Vector3 savePosition;
     }
 
     private SaveData saveData = new SaveData();
@@ -31,10 +32,12 @@ public class TimelineManager : Singleton<TimelineManager>
 
     private void Awake()
     {
-        director = GetComponent<PlayableDirector>();
 
         foreach (var timeline in timelineInputs)
             timelines.Add(timeline.name, timeline);
+
+        director = GetComponent<PlayableDirector>();
+
     }
 
     public void PlayTimeline(string str)
@@ -79,17 +82,30 @@ public class TimelineManager : Singleton<TimelineManager>
         Debug.Log("EndPlayTimeline");
     }
 
+    public void EndPlayTimelineTop()
+    {
+        director.Stop();
+        GameManager.Instance.IsKeyHold = false;
+        CameraManager.Instance.MainCMChange();
+        CameraManager.Instance.IsLock = false;
+        StartCoroutine(VolumeManager.Instance.VigEnd());
+        Debug.Log("EndPlayTimeline");
+    }
+
     public void SavePoint()
     {
         saveData.saveTime = director.time;
         saveData.saveTimeline = director.playableAsset.name;
+        saveData.savePosition = GameManager.Instance.player.transform.position;
         Debug.Log(saveData.saveTime + "  " + saveData.saveTimeline);
     }
 
     public void ReturnSavePoint()
     {
+        
         PlayTimeline(saveData.saveTimeline);
         director.time = saveData.saveTime;
+        GameManager.Instance.player.transform.position = saveData.savePosition;
         StartHold();
     }
 

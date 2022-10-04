@@ -12,16 +12,41 @@ public class Boss : MonoBehaviour
     [SerializeField] private List<Renderer> bodyRenderer = null;
 
     [HideInInspector]  public PlayerController target;
+
+    private int curArm = 6;
+
+    [SerializeField] private AudioClip[] audios;
+    private AudioSource audioSource;
+    public bool isStart = false;
+
+    public enum AudioTag { ROAR, NEAR, NORMAL, HIT, ARM_DIE }
+
+    public void SoundPlay(AudioTag tag)
+    {
+        audioSource.clip = audios[(int)tag];
+        audioSource.Play();
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
         animator = GetComponent<Animator>();
         bossArms = new List<BossArmHeadCollider>(GetComponentsInChildren<BossArmHeadCollider>());
         target = FindObjectOfType<PlayerController>();
+        audioSource = GetComponent<AudioSource>();
         foreach (var arm in bossArms) arm.deadEvent += DeadArm;
 
         foreach (var renderer in bodyRenderer)
             renderer.material.SetFloat("_NoiseScale", 50f);
+    }
+
+    public void BossSet()
+    {
+        foreach (var arm in bossArms)
+        {
+            arm.gameObject.SetActive(true);
+            arm.Set();
+        }
     }
 
     public void AttackColliderActive(bool isActive)
@@ -33,9 +58,9 @@ public class Boss : MonoBehaviour
 
     public void DeadArm(BossArmHeadCollider deadArm)
     {
-        bossArms.Remove(deadArm);
-
-        if (bossArms.Count == 0)
+        --curArm;
+        
+        if (curArm == 0)
         {
 
             animator.SetTrigger("Dead");
@@ -45,6 +70,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator BossDeadCo()
     {
+        SoundPlay(AudioTag.ROAR);
         float dissolveValue = 0f;
 
         while (dissolveValue < 1f)
@@ -58,6 +84,11 @@ public class Boss : MonoBehaviour
 
         foreach (var renderer in bodyRenderer)
             renderer.material.SetFloat("_Dissolve", 1f);
+
+        
+        TimelineManager.Instance.PlayTimeline("Stage2End");
+        TimelineManager.Instance.StartHold();
+        gameObject.SetActive(false);
    
         yield return null;
     }

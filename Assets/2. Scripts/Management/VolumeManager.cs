@@ -30,7 +30,6 @@ public class VolumeManager : Singleton<VolumeManager>
         vp = v.profile;
         Vignette vig = GetShared<Vignette>();
         curVigValue = vig.intensity.value;
-        Debug.Log(curVigValue);
     }
 
     public IEnumerator VigStart(float dstIntensity)

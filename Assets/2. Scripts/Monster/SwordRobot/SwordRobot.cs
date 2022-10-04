@@ -5,10 +5,17 @@ using UnityEngine.Events;
 
 public enum SwordRobotState { IDLE, TRACE, ATTACK, HIT, DIE, NONE_STATE }
 
+
+
 public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
 {
     // Start is called before the first frame update
     [SerializeField] private Collider attackCollider;
+
+    public enum AudioTag { DEAD, HIT, SWORD }
+
+
+
     public void AttackColliderActive(bool isActive)
     {
         attackCollider.enabled = isActive;
@@ -44,18 +51,22 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         if (curHp <= 0)
             return;
 
+        
+
         curHp -= damage;
         attackCollider.enabled = false;
         if (curHp > 0)
         {
             ChangeState(SwordRobotState.HIT);
             animator.SetTrigger("Hit");
+            SoundPlay((int)AudioTag.HIT);
         }
         else
         {
             StopAllCoroutines();
             animator.SetTrigger("Dead");
             targetedObject?.SetActive(false);
+            SoundPlay((int)AudioTag.DEAD);
             isDead = true;
             ChangeState(SwordRobotState.DIE);
         }
