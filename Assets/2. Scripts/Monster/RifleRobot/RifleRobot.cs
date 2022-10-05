@@ -101,4 +101,19 @@ public partial class RifleRobot : Monster<RifleRobotState, RifleRobot>
         stateMachine.AddState(RifleRobotState.ATTACK, new AttackState());
         stateMachine.AddState(RifleRobotState.DIE, new DieState());
     }
+
+    public override MonoBehaviour GetMonoBehavior()
+    {
+        return this;
+    }
+
+    public override void PoolingEnable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void PoolingDisable()
+    {
+        throw new System.NotImplementedException();
+    }
 }

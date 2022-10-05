@@ -53,7 +53,6 @@ public class Boss : MonoBehaviour
     {
         foreach (var arm in bossArms) arm.CollidersTriggerOn(!isActive);
     }
-
    
 
     public void DeadArm(BossArmHeadCollider deadArm)
@@ -71,6 +70,7 @@ public class Boss : MonoBehaviour
     IEnumerator BossDeadCo()
     {
         SoundPlay(AudioTag.ROAR);
+
         float dissolveValue = 0f;
 
         while (dissolveValue < 1f)

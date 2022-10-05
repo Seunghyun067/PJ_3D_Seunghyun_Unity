@@ -25,7 +25,6 @@ public class ObjectPooling : Singleton<ObjectPooling>
                 return;
             }
 
-
             GameObject parentObj = new GameObject(inputObj.obj.name);
             parentObj.transform.parent = transform;
             objectPoolParents.Add(parentObj.name, parentObj);
@@ -41,7 +40,7 @@ public class ObjectPooling : Singleton<ObjectPooling>
             objectPool.Add(inputObj.obj.name, newPool);
         }
     }
-
+    
     public GameObject PopObject(string tag, Vector3 position, Quaternion rotation)
     {
         if(!objectPool.ContainsKey(tag))
@@ -56,6 +55,7 @@ public class ObjectPooling : Singleton<ObjectPooling>
         obj.transform.rotation = rotation;
         return obj;
     }
+
 
     public GameObject PopObject(string tag, Vector3 position)
     {
@@ -110,11 +110,5 @@ public class ObjectPooling : Singleton<ObjectPooling>
         obj.SetActive(false);
         obj.transform.parent = objectPoolParents[tag].transform;
         objectPool[tag].Enqueue(obj);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

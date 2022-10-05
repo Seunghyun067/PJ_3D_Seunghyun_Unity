@@ -14,7 +14,7 @@ public class PlayerAnimationEvent : MonoBehaviour
     {
         player.katana.KatanaTrailActive(true);
         player.katana.AttackColliderActive(true);
-        player.SoundPlay(PlayerController.AudioTag.SWORD);
+        //player.SoundPlay(PlayerController.AudioTag.SWORD);
     }
     void SwordTrailOff()
     {

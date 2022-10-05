@@ -83,4 +83,17 @@ public partial class SwordRobot : Monster<SwordRobotState, SwordRobot>
         stateMachine.AddState(SwordRobotState.ATTACK, new AttackState());
         stateMachine.AddState(SwordRobotState.DIE, new DieState());
     }
+
+    public override MonoBehaviour GetMonoBehavior()
+    {
+        return this;
+    }
+
+    public override void PoolingEnable()
+    {
+    }
+
+    public override void PoolingDisable()
+    {
+    }
 }

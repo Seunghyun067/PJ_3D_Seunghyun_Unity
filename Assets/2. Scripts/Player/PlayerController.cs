@@ -23,13 +23,7 @@ public class PlayerController : MonoBehaviour, IDamable
     [SerializeField] private AudioClip[] audios;
     private AudioSource audioSource;
 
-    public enum AudioTag { DEAD, HIT, FARRY, SWORD }
-
-    public void SoundPlay(AudioTag tag)
-    {
-        audioSource.clip = audios[(int)tag];
-        audioSource.Play();
-    }
+    public enum AudioTag { DEAD, HIT, FARRY, SWORD }    
 
     private int hp = 10;
     public int Hp
@@ -126,8 +120,9 @@ public class PlayerController : MonoBehaviour, IDamable
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         hp = maxHp;
-    }
 
+        
+    }
     public void ParryAttackGo()
     {
         animator.SetTrigger("ParryAttack");
@@ -176,14 +171,15 @@ public class PlayerController : MonoBehaviour, IDamable
 
         Hp -= damage;
 
-        SoundPlay(AudioTag.HIT);
+
+        //SoundPlay(AudioTag.HIT);
         
 
         if (Hp <= 0)
         {
 
             animator.SetBool("Dead", IsDead = true);
-            SoundPlay(AudioTag.DEAD);
+            //SoundPlay(AudioTag.DEAD);
         }
         float angle = Mathf.Acos(Vector3.Dot(transform.forward, targetTransform.forward)) * Mathf.Rad2Deg;
 
@@ -200,9 +196,6 @@ public class PlayerController : MonoBehaviour, IDamable
         katana.AttackColliderActive(false);
         katana.ParryingColliderActive(false);
         animator.ResetTrigger("ParryAttack");
-
-       
-
     }
 
     public void PlayerKill()

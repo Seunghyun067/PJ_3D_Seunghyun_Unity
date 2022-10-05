@@ -6,7 +6,7 @@ using TMPro;
 
 public class ConversationController : MonoBehaviour
 {
-    private AudioSource audio;    
+    private AudioSource audioSource;    
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI conversationText;
     [SerializeField] private float converSpeed = 1f;
@@ -20,7 +20,7 @@ public class ConversationController : MonoBehaviour
 
     private void Awake()
     {
-        audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void StartConversation(ConversationInformation conver, UnityAction endConverEvent)
@@ -73,7 +73,7 @@ public class ConversationController : MonoBehaviour
 
     IEnumerator ConverTextCo(string text, string name)
     {
-        audio.Play();
+        audioSource.Play();
         isConverComp = false;
         conversationText.text = "";
         nameText.text = name;
@@ -84,5 +84,4 @@ public class ConversationController : MonoBehaviour
         }
         isConverComp = true;
     }
-
 }

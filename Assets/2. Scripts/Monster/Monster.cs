@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
 
-public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  where T2 : MonoBehaviour
+public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable, IPoolingEnable where T2 : MonoBehaviour
 {
     [SerializeField] protected GameObject targetedObject = null;
     [SerializeField] protected Transform bodyPoint = null;
@@ -167,5 +167,14 @@ public abstract class Monster<T1, T2> : MonoBehaviour, ITargetable, IDamable  wh
     public bool IsTarget()
     {
         return !isDead;
+    }
+
+    public abstract MonoBehaviour GetMonoBehavior();
+    public abstract void PoolingEnable();
+    public abstract void PoolingDisable();
+
+    public GameObject GetGameObject()
+    {
+        return gameObject;
     }
 }

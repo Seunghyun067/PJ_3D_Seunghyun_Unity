@@ -134,4 +134,19 @@ public partial class Anglerox : Monster<AngleroxState, Anglerox>
         StartCoroutine(DissolveDisable(0.3f));
 
     }
+
+    public override MonoBehaviour GetMonoBehavior()
+    {
+        return this;
+    }
+
+    public override void PoolingEnable()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void PoolingDisable()
+    {
+        throw new System.NotImplementedException();
+    }
 }

@@ -15,6 +15,5 @@ public class ConversationInformation : ScriptableObject
     }
 
     [SerializeField] private Conver[] conversation;
-    public Conver[] Conversation { get { return conversation; } }
-    
+    public Conver[] Conversation { get { return conversation; } }    
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public partial class Anglerox : Monster<AngleroxState, Anglerox>
-{    
+{
     private class TraceState : BaseState
     {
         public override void OnStateEnter(Anglerox owner)
