@@ -19,7 +19,6 @@ public class KatanaParryingCollider : MonoBehaviour
         Instantiate(Effect, transform.position, Quaternion.identity);
         GameManager.Instance.TimeSleep(0.1f, 0.5f);
         player.parringAction?.Invoke();
-        //her.enabled = false;
         myCollider.enabled = false;
     }
 

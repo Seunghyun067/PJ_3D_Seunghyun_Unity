@@ -170,11 +170,7 @@ public class PlayerController : MonoBehaviour, IDamable
             return;
 
         Hp -= damage;
-
-
         //SoundPlay(AudioTag.HIT);
-        
-
         if (Hp <= 0)
         {
 
@@ -188,10 +184,7 @@ public class PlayerController : MonoBehaviour, IDamable
         else if (0 < angle && angle <= 90f) // 0 ~ 90 µÚ
             animator.SetBool("FrontHit", false);
 
-        Vector3 pos = transform.position;
-        pos.y += 1f;
-        string bloodTag = "Blood" + UnityEngine.Random.Range(1, 4).ToString();
-        ObjectPooling.Instance.PopObject(bloodTag, pos);
+        HitEffect(bodyPoint.position);
         katana.KatanaTrailActive(false);
         katana.AttackColliderActive(false);
         katana.ParryingColliderActive(false);
@@ -204,8 +197,9 @@ public class PlayerController : MonoBehaviour, IDamable
         animator.SetBool("Dead", IsDead = true);
     }
 
-    public void HitEffect(Vector3 position, Quaternion rotation)
+    public void HitEffect(Vector3 position, Quaternion rotation = default(Quaternion))
     {
-        throw new NotImplementedException();
+        string bloodTag = "Blood" + UnityEngine.Random.Range(1, 4).ToString();
+        ObjectPooling.Instance.PopObject(bloodTag, position);
     }
 }

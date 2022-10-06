@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IPoolingEnable
 {
+
     MonoBehaviour GetMonoBehavior();
     GameObject GetGameObject();
     void PoolingEnable();

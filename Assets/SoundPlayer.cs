@@ -20,6 +20,7 @@ public class SoundPlayer : MonoBehaviour
 
     IEnumerator PlayCo()
     {
+        yield return null;
         //³¡³ª¸é Destroy(
     }
 
